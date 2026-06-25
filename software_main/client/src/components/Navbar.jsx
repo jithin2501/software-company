@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NAV_LINKS = ["Home", "About", "Services", "Portfolio", "Contact"];
+const NAV_LINKS = ["Home", "About", "Services", "Portfolio", "Review", "Contact"];
 
 export default function Navbar({ currentView, setView }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ export default function Navbar({ currentView, setView }) {
     <header className="w-full px-14 md:px-36 py-4 flex items-center justify-between bg-white/80 backdrop-blur-md sticky top-0 z-50">
       {/* Logo */}
       <div 
-        className="flex items-center gap-2.5 select-none cursor-pointer"
+        className="flex items-center gap-2.5 select-none cursor-pointer md:ml-12"
         onClick={() => setView("landing")}
       >
         <div className="relative w-9 h-9">
@@ -76,7 +76,7 @@ export default function Navbar({ currentView, setView }) {
       </nav>
 
       {/* CTA */}
-      <div className="hidden md:flex items-center gap-3">
+      <div className="hidden md:flex items-center gap-3 md:mr-12">
         <button
           onClick={() => setView("contact")}
           className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md transition-all duration-200 hover:shadow-orange-300 cursor-pointer"
