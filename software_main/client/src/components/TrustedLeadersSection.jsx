@@ -194,7 +194,10 @@ export default function TrustedLeadersSection() {
             <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block" viewBox="0 0 1000 460" fill="none">
               {/* Markers for double-headed curved arrows */}
               <defs>
-                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <marker id="arrow-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0084FF" />
+                </marker>
+                <marker id="arrow-orange" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                   <path d="M 0 0 L 10 5 L 0 10 z" fill="#F57C00" />
                 </marker>
               </defs>
@@ -221,10 +224,10 @@ export default function TrustedLeadersSection() {
               <circle cx="895" cy="240" r="5.5" fill="#F57C00" />
 
               {/* Top-Left Verified Partner Curved Double Arrow */}
-              <path d="M 240 75 Q 315 75 385 135" stroke="#F57C00" strokeWidth="1.5" strokeDasharray="4 4" markerEnd="url(#arrow)" markerStart="url(#arrow)" />
+              <path d="M 280 35 Q 338.5 35 397 107" stroke="#0084FF" strokeWidth="1.5" strokeDasharray="4 4" markerEnd="url(#arrow-blue)" markerStart="url(#arrow-blue)" />
 
               {/* Top-Right 500+ Clients Curved Double Arrow */}
-              <path d="M 760 75 Q 685 75 615 135" stroke="#F57C00" strokeWidth="1.5" strokeDasharray="4 4" markerEnd="url(#arrow)" markerStart="url(#arrow)" />
+              <path d="M 720 35 Q 661.5 35 603 107" stroke="#F57C00" strokeWidth="1.5" strokeDasharray="4 4" markerEnd="url(#arrow-orange)" markerStart="url(#arrow-orange)" />
             </svg>
 
             {/* Central Globe Block */}
@@ -256,27 +259,27 @@ export default function TrustedLeadersSection() {
             {/* Orbit Badges - Absolute Positioning Centered on SVG Paths */}
 
             {/* Top Indicators */}
-            <div className="absolute left-[24%] top-[75px] -translate-x-1/2 -translate-y-1/2 z-20 flex items-center gap-3 bg-white px-4 py-3 rounded-2xl shadow-md border border-gray-50 max-w-[200px]">
-              <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center flex-shrink-0">
+            <div className="absolute left-[18%] top-[35px] -translate-x-1/2 -translate-y-1/2 z-20 flex items-center gap-3 bg-white px-4 py-3 rounded-2xl shadow-md border border-gray-50 w-[185px]">
+              <div className="w-8 h-8 rounded-full bg-blue-50 text-[#0084FF] flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] font-black text-emerald-600 uppercase tracking-wider">Verified Partner</span>
+                <span className="text-[10px] font-black text-[#0084FF] uppercase tracking-wider">Verified Partner</span>
                 <span className="text-[9px] font-bold text-gray-400">Official Tech Partners</span>
               </div>
             </div>
 
-            <div className="absolute right-[24%] top-[75px] translate-x-1/2 -translate-y-1/2 z-20 flex items-center gap-3 bg-white px-4 py-3 rounded-2xl shadow-md border border-gray-50 max-w-[200px]">
-              <div className="w-8 h-8 rounded-full bg-blue-50 text-[#0084FF] flex items-center justify-center flex-shrink-0">
+            <div className="absolute left-[82%] top-[35px] -translate-x-1/2 -translate-y-1/2 z-20 flex items-center gap-3 bg-white px-4 py-3 rounded-2xl shadow-md border border-gray-50 w-[185px]">
+              <div className="w-8 h-8 rounded-full bg-orange-50 text-[#F57C00] flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                   <circle cx="9" cy="7" r="4" />
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] font-black text-[#0084FF] uppercase tracking-wider">500+</span>
+                <span className="text-[10px] font-black text-[#F57C00] uppercase tracking-wider">500+</span>
                 <span className="text-[9px] font-bold text-gray-400">Happy Clients</span>
               </div>
             </div>
