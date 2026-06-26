@@ -1,13 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const NAV_LINKS = ["Home", "About", "Services", "Portfolio", "Review", "Contact"];
 
 export default function Navbar({ currentView, setView }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 15) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    // Check initially on mount
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="w-full px-14 md:px-36 py-4 flex items-center justify-between bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <header
+      className={`w-full px-14 md:px-36 py-4 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out ${
+        scrolled
+          ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-200/40"
+          : "bg-[#f9fafb] shadow-none border-b border-transparent"
+      }`}
+    >
       {/* Logo */}
       <div 
         className="flex items-center gap-2.5 select-none cursor-pointer md:ml-12"
@@ -113,7 +138,7 @@ export default function Navbar({ currentView, setView }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-16 left-0 w-full md:hidden bg-white border-b border-gray-100 px-6 py-4 flex flex-col gap-4 z-40 shadow-md">
+        <div className="absolute top-full left-0 w-full md:hidden bg-white border-b border-gray-100 px-6 py-4 flex flex-col gap-4 z-40 shadow-md">
           {NAV_LINKS.map((link) => (
             <button
               key={link}
