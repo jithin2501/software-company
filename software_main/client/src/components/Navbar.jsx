@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const NAV_LINKS = ["Home", "About", "Services", "Portfolio", "Review", "Contact"];
 
-export default function Navbar({ currentView, setView }) {
+export default function Navbar({ currentView, setView, setActiveServiceTab }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -79,11 +79,28 @@ export default function Navbar({ currentView, setView }) {
 
             {/* Services dropdown */}
             {link === "Services" && servicesOpen && (
-              <div className="absolute top-8 left-0 bg-white shadow-xl rounded-xl py-2 w-44 z-50 border border-gray-100">
-                {["Web Design", "SEO & Growth", "App Development", "Branding"].map((s) => (
+              <div className="absolute top-8 left-0 bg-white shadow-xl rounded-xl py-2 w-48 z-50 border border-gray-100">
+                {[
+                  "Web Design",
+                  "SEO & Growth",
+                  "App Development",
+                  "Branding",
+                  "Cloud Computing",
+                  "Data Protection",
+                ].map((s, index) => (
                   <a
                     key={s}
                     href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setView("landing");
+                      setActiveServiceTab(index);
+                      setServicesOpen(false);
+                      setTimeout(() => {
+                        const el = document.getElementById("services");
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }, 100);
+                    }}
                     className="block px-4 py-2 text-sm text-gray-700 hover:text-[#0084FF] hover:bg-blue-50 transition-colors"
                   >
                     {s}
@@ -138,8 +155,16 @@ export default function Navbar({ currentView, setView }) {
             <button
               key={link}
               onClick={() => {
-                setView(link.toLowerCase() === "contact" ? "contact" : "landing");
                 setMenuOpen(false);
+                if (link === "Services") {
+                  setView("landing");
+                  setTimeout(() => {
+                    const el = document.getElementById("services");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                } else {
+                  setView(link.toLowerCase() === "contact" ? "contact" : "landing");
+                }
               }}
               className="text-left text-sm font-medium text-gray-700 hover:text-[#0084FF] transition-colors cursor-pointer"
             >

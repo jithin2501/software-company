@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import ContactPage from "./pages/ContactPage";
+import ServicesSection from "./components/ServicesSection";
 
 export default function App() {
   const [view, setView] = useState("landing");
+  const [activeServiceTab, setActiveServiceTab] = useState(4); // Default: Cloud Computing
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -12,11 +14,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen font-sans">
-      <Navbar currentView={view} setView={setView} />
+      <Navbar currentView={view} setView={setView} setActiveServiceTab={setActiveServiceTab} />
       {/* Spacer to prevent fixed Navbar from covering content */}
       <div className="h-[72px]"></div>
       {view === "landing" ? (
-        <LandingPage setView={setView} />
+        <>
+          <LandingPage setView={setView} />
+          <ServicesSection activeTab={activeServiceTab} setActiveTab={setActiveServiceTab} />
+        </>
       ) : (
         <ContactPage />
       )}
