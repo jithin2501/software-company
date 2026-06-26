@@ -15,7 +15,7 @@ export default function Navbar({ currentView, setView }) {
         setScrolled(false);
       }
     };
-    
+
     // Check initially on mount
     handleScroll();
 
@@ -27,28 +27,24 @@ export default function Navbar({ currentView, setView }) {
 
   return (
     <header
-      className={`w-full px-14 md:px-36 py-4 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-200/40"
-          : "bg-[#f9fafb] shadow-none border-b border-transparent"
-      }`}
+      className={`w-full px-14 md:px-36 py-4 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out ${scrolled
+          ? "bg-white/90 backdrop-blur-md shadow-none border-none"
+          : "bg-[#f9fafb] shadow-none border-none"
+        }`}
     >
       {/* Logo */}
-      <div 
+      <div
         className="flex items-center gap-2.5 select-none cursor-pointer md:ml-12"
         onClick={() => setView("landing")}
       >
-        <div className="relative w-9 h-9">
-          <svg viewBox="0 0 40 40" fill="none" className="w-full h-full">
-            <circle cx="20" cy="20" r="18" fill="#1a1a2e" />
-            <path d="M12 20 Q20 8 28 20 Q20 32 12 20Z" fill="#f97316" />
-            <path d="M20 12 Q32 20 20 28 Q8 20 20 12Z" fill="#3b82f6" opacity="0.85" />
-            <circle cx="20" cy="20" r="4" fill="white" />
-          </svg>
-        </div>
+        <img
+          src="/images/navbar/logo.png"
+          alt="Zentrivo Technologies Logo"
+          className="w-9 h-9 object-contain"
+        />
         <div className="leading-tight">
-          <p className="text-[15px] font-bold text-gray-900 tracking-tight">Digital Elite</p>
-          <p className="text-[13px] font-semibold text-orange-500 -mt-0.5">Service</p>
+          <p className="text-[15px] font-bold text-gray-900 tracking-tight">Zentrivo</p>
+          <p className="text-[13px] font-semibold text-orange-500 -mt-0.5">Technologies</p>
         </div>
       </div>
 
@@ -69,11 +65,10 @@ export default function Navbar({ currentView, setView }) {
             ) : (
               <button
                 onClick={() => setView(link.toLowerCase() === "contact" ? "contact" : "landing")}
-                className={`text-sm font-medium transition-colors cursor-pointer relative ${
-                  (link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact")
+                className={`text-sm font-medium transition-colors cursor-pointer relative ${(link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact")
                     ? "text-gray-900 font-semibold"
                     : "text-gray-600 hover:text-orange-500"
-                }`}
+                  }`}
               >
                 {link}
                 {((link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact")) && (
