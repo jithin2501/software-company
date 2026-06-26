@@ -5,6 +5,7 @@ import ContactPage from "./pages/ContactPage";
 import ServicesSection from "./components/ServicesSection";
 import CollaborationsSection from "./components/CollaborationsSection";
 import TrustedLeadersSection from "./components/TrustedLeadersSection";
+import MethodologySection from "./components/MethodologySection";
 
 export default function App() {
   const [view, setView] = useState("landing");
@@ -25,6 +26,7 @@ export default function App() {
           <ServicesSection activeTab={activeServiceTab} setActiveTab={setActiveServiceTab} />
           <CollaborationsSection />
           <TrustedLeadersSection />
+          <MethodologySection />
         </>
       ) : (
         <ContactPage />
