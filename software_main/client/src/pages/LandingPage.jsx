@@ -5,7 +5,7 @@ export default function LandingPage({ setView }) {
       <div className="flex flex-col gap-6 md:gap-7 w-full md:w-[40%] flex-shrink-0 md:-mt-10">
         {/* Eyebrow badge */}
         <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-1.5 w-fit shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#0084FF] animate-pulse" />
           <span className="text-[11px] font-semibold tracking-widest text-gray-600 uppercase">
             Architecture of Innovation
           </span>
@@ -14,11 +14,11 @@ export default function LandingPage({ setView }) {
         {/* Headline */}
         <h1 className="text-5xl md:text-6xl font-extrabold leading-[1.08] tracking-tight text-gray-900">
           Find the{" "}
-          <span className="text-blue-500">best</span>
+          <span className="text-[#0084FF]">best</span>
           <br />
-          <span className="text-blue-500">solution</span>
+          <span className="text-[#0084FF]">solution</span>
           <br />
-          <span className="text-orange-500">together.</span>
+          <span className="text-[#0A1128]">together.</span>
         </h1>
 
         {/* Subtext */}
@@ -30,7 +30,7 @@ export default function LandingPage({ setView }) {
         <div className="flex items-center gap-5 mt-2">
           <button
             onClick={() => setView("contact")}
-            className="flex items-center gap-2.5 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm px-6 py-3.5 rounded-full shadow-lg shadow-orange-200 transition-all duration-200 hover:scale-[1.02] cursor-pointer"
+            className="flex items-center gap-2.5 bg-[#0084FF] hover:bg-[#0070DA] text-white font-semibold text-sm px-6 py-3.5 rounded-full shadow-lg shadow-blue-200 transition-all duration-200 hover:scale-[1.02] cursor-pointer"
           >
             Begin Journey
             <span className="w-5 h-5 bg-white/25 rounded-full flex items-center justify-center">
@@ -41,9 +41,9 @@ export default function LandingPage({ setView }) {
             </span>
           </button>
 
-          <button className="flex items-center gap-3 text-gray-700 hover:text-orange-500 text-sm font-semibold transition-colors group cursor-pointer">
-            <span className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-100 group-hover:border-orange-300 transition-colors">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" className="text-orange-500 ml-0.5">
+          <button className="flex items-center gap-3 text-gray-700 hover:text-[#0084FF] text-sm font-semibold transition-colors group cursor-pointer">
+            <span className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-100 group-hover:border-blue-300 transition-colors">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" className="text-[#0084FF] ml-0.5">
                 <polygon points="5 3 19 12 5 21 5 3" />
               </svg>
             </span>

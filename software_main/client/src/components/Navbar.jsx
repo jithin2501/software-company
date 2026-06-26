@@ -28,13 +28,13 @@ export default function Navbar({ currentView, setView }) {
   return (
     <header
       className={`w-full px-14 md:px-36 py-4 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out ${scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-none border-none"
-          : "bg-[#f9fafb] shadow-none border-none"
+        ? "bg-white/90 backdrop-blur-md shadow-none border-none"
+        : "bg-[#f9fafb] shadow-none border-none"
         }`}
     >
       {/* Logo */}
       <div
-        className="flex items-center gap-2.5 select-none cursor-pointer md:ml-12"
+        className="flex items-center gap-3 select-none cursor-pointer md:ml-12"
         onClick={() => setView("landing")}
       >
         <img
@@ -42,9 +42,9 @@ export default function Navbar({ currentView, setView }) {
           alt="Zentrivo Technologies Logo"
           className="w-9 h-9 object-contain"
         />
-        <div className="leading-tight">
-          <p className="text-[15px] font-bold text-gray-900 tracking-tight">Zentrivo</p>
-          <p className="text-[13px] font-semibold text-orange-500 -mt-0.5">Technologies</p>
+        <div className="flex flex-col justify-center gap-0.5 pt-1">
+          <p className="font-serif text-[17px] font-extrabold uppercase text-[#0084FF] tracking-wide leading-none ">Zentrivo</p>
+          <p className="font-serif text-[14px] font-bold uppercase text-[#0A1128] tracking-[0.12em] leading-none">Technologies</p>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ export default function Navbar({ currentView, setView }) {
             {link === "Services" ? (
               <button
                 onClick={() => setServicesOpen((o) => !o)}
-                className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors cursor-pointer"
+                className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-[#0084FF] transition-colors cursor-pointer"
               >
                 {link}
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -66,13 +66,13 @@ export default function Navbar({ currentView, setView }) {
               <button
                 onClick={() => setView(link.toLowerCase() === "contact" ? "contact" : "landing")}
                 className={`text-sm font-medium transition-colors cursor-pointer relative ${(link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact")
-                    ? "text-gray-900 font-semibold"
-                    : "text-gray-600 hover:text-orange-500"
+                  ? "text-gray-900 font-semibold"
+                  : "text-gray-600 hover:text-[#0084FF]"
                   }`}
               >
                 {link}
                 {((link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact")) && (
-                  <span className="block h-0.5 w-full bg-orange-500 rounded-full mt-0.5 absolute -bottom-1 left-0" />
+                  <span className="block h-0.5 w-full bg-[#0084FF] rounded-full mt-0.5 absolute -bottom-1 left-0" />
                 )}
               </button>
             )}
@@ -84,7 +84,7 @@ export default function Navbar({ currentView, setView }) {
                   <a
                     key={s}
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:text-[#0084FF] hover:bg-blue-50 transition-colors"
                   >
                     {s}
                   </a>
@@ -99,7 +99,7 @@ export default function Navbar({ currentView, setView }) {
       <div className="hidden md:flex items-center gap-3 md:mr-12">
         <button
           onClick={() => setView("contact")}
-          className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md transition-all duration-200 hover:shadow-orange-300 cursor-pointer"
+          className="flex items-center gap-2 bg-[#0084FF] hover:bg-[#0070DA] text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md transition-all duration-200 hover:shadow-blue-300 cursor-pointer"
         >
           Get Started
           <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@ export default function Navbar({ currentView, setView }) {
                 setView(link.toLowerCase() === "contact" ? "contact" : "landing");
                 setMenuOpen(false);
               }}
-              className="text-left text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors cursor-pointer"
+              className="text-left text-sm font-medium text-gray-700 hover:text-[#0084FF] transition-colors cursor-pointer"
             >
               {link}
             </button>
@@ -151,7 +151,7 @@ export default function Navbar({ currentView, setView }) {
               setView("contact");
               setMenuOpen(false);
             }}
-            className="mt-2 bg-orange-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full text-center shadow cursor-pointer"
+            className="mt-2 bg-[#0084FF] text-white text-sm font-semibold px-5 py-2.5 rounded-full text-center shadow cursor-pointer"
           >
             Get Started →
           </button>

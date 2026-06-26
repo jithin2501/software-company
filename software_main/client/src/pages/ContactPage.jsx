@@ -84,14 +84,11 @@ export default function ContactPage() {
     <div className="min-h-screen font-sans">
       {/* Header */}
       <div className="text-center pt-14 pb-10 px-4">
-        <p className="text-xs font-semibold tracking-widest text-blue-500 uppercase mb-3">
-          ✦ Let's Connect
-        </p>
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-          <span className="text-orange-400">We're Here</span>
+          <span className="text-[#0084FF]">We're Here</span>
           <br />
           <span className="text-gray-800">When </span>
-          <span className="text-blue-500">You Need Us</span>
+          <span className="text-[#0A1128]">You Need Us</span>
         </h1>
         <p className="mt-4 text-gray-500 text-base max-w-2xl mx-auto">
           Got a question, feedback, or a project in mind? Reach out to us — we'd love to hear from you!
@@ -117,57 +114,57 @@ export default function ContactPage() {
             style={{ height: 130, top: 0, left: 0 }}
             aria-hidden="true"
           >
-            {/* Segment 1: Leftmost dot to Email Us (Purple) */}
+            {/* Segment 1: Leftmost dot to Email Us (Blue) */}
             <path
               d="M10,15 C30,15 45,45 66,55"
               fill="none"
-              stroke="#A855F7"
+              stroke="#0084FF"
               strokeWidth="2"
             />
-            <circle cx="10" cy="15" r="4.5" fill="#A855F7" />
+            <circle cx="10" cy="15" r="4.5" fill="#0084FF" />
 
-            {/* Segment 2: Email Us to Call Us (Orange) */}
+            {/* Segment 2: Email Us to Call Us (Navy) */}
             <path
               d="M134,60 C175,85 225,15 266,55"
               fill="none"
-              stroke="#FB923C"
+              stroke="#0A1128"
               strokeWidth="2"
             />
 
-            {/* Segment 3: Call Us to Send a Message (Purple) */}
+            {/* Segment 3: Call Us to Send a Message (Blue) */}
             <path
               d="M334,55 C365,40 405,40 434,50"
               fill="none"
-              stroke="#A855F7"
+              stroke="#0084FF"
               strokeWidth="2"
             />
-            <circle cx="434" cy="50" r="4.5" fill="#A855F7" />
+            <circle cx="434" cy="50" r="4.5" fill="#0084FF" />
 
-            {/* Segment 4: Send a Message to Visit Us (Orange) */}
+            {/* Segment 4: Send a Message to Visit Us (Navy) */}
             <path
               d="M566,50 C595,40 635,40 666,55"
               fill="none"
-              stroke="#FB923C"
+              stroke="#0A1128"
               strokeWidth="2"
             />
-            <circle cx="566" cy="50" r="4.5" fill="#FB923C" />
+            <circle cx="566" cy="50" r="4.5" fill="#0A1128" />
 
-            {/* Segment 5: Visit Us to Support Hours (Purple) */}
+            {/* Segment 5: Visit Us to Support Hours (Blue) */}
             <path
               d="M734,55 C775,15 825,85 866,60"
               fill="none"
-              stroke="#A855F7"
+              stroke="#0084FF"
               strokeWidth="2"
             />
 
-            {/* Segment 6: Support Hours to Rightmost dot (Orange) */}
+            {/* Segment 6: Support Hours to Rightmost dot (Navy) */}
             <path
               d="M934,55 C955,45 970,15 990,15"
               fill="none"
-              stroke="#FB923C"
+              stroke="#0A1128"
               strokeWidth="2"
             />
-            <circle cx="990" cy="15" r="4.5" fill="#FB923C" />
+            <circle cx="990" cy="15" r="4.5" fill="#0A1128" />
           </svg>
 
           {/* Icon nodes — absolutely positioned over the SVG */}
@@ -190,7 +187,7 @@ export default function ContactPage() {
             >
               <div
                 className={`rounded-full flex items-center justify-center shadow-xl ${m.accent
-                  ? "bg-white ring-8 ring-purple-50/30"
+                  ? "bg-white ring-8 ring-blue-50/30"
                   : "bg-white border border-gray-100"
                   }`}
                 style={{
@@ -200,18 +197,18 @@ export default function ContactPage() {
                 }}
               >
                 {m.accent ? (
-                  <div className="w-[92px] h-[92px] rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center">
+                  <div className="w-[92px] h-[92px] rounded-full bg-gradient-to-br from-[#0084FF] to-[#0A1128] flex items-center justify-center">
                     <span className="text-white">
                       {m.icon}
                     </span>
                   </div>
                 ) : (
-                  <span className="text-purple-500">
+                  <span className="text-[#0084FF]">
                     {m.icon}
                   </span>
                 )}
               </div>
-              <p className={`text-xs font-semibold leading-tight ${m.accent ? "text-purple-600" : "text-gray-700"}`}>
+              <p className={`text-xs font-semibold leading-tight ${m.accent ? "text-[#0084FF]" : "text-gray-700"}`}>
                 {m.label}
               </p>
               <p className="text-[10px] text-gray-400 leading-snug mt-0.5">{m.detail}</p>
@@ -226,7 +223,7 @@ export default function ContactPage() {
           <div key={i} className="flex flex-col items-center text-center gap-2 w-40">
             <div
               className={`rounded-full flex items-center justify-center shadow-xl ${m.accent
-                ? "bg-white ring-8 ring-purple-50/30"
+                ? "bg-white ring-8 ring-blue-50/30"
                 : "bg-white border border-gray-100"
                 }`}
               style={{
@@ -235,14 +232,14 @@ export default function ContactPage() {
               }}
             >
               {m.accent ? (
-                <div className="w-[84px] h-[84px] rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center">
+                <div className="w-[84px] h-[84px] rounded-full bg-gradient-to-br from-[#0084FF] to-[#0A1128] flex items-center justify-center">
                   <span className="text-white">{m.icon}</span>
                 </div>
               ) : (
-                <span className="text-purple-500">{m.icon}</span>
+                <span className="text-[#0084FF]">{m.icon}</span>
               )}
             </div>
-            <p className={`text-xs font-semibold ${m.accent ? "text-purple-600" : "text-gray-700"}`}>{m.label}</p>
+            <p className={`text-xs font-semibold ${m.accent ? "text-[#0084FF]" : "text-gray-700"}`}>{m.label}</p>
             <p className="text-[11px] text-gray-400 leading-snug">{m.detail}</p>
           </div>
         ))}
@@ -257,7 +254,7 @@ export default function ContactPage() {
             <p className="text-xl font-bold leading-tight text-slate-800">
               Have a big idea?<br />
               Let's build something{" "}
-              <span className="text-orange-500 italic">extraordinary.</span>
+              <span className="text-[#0084FF] italic">extraordinary.</span>
             </p>
             {/* Big Idea Image */}
             <div className="w-full mt-auto pt-4 flex justify-center">
@@ -273,9 +270,9 @@ export default function ContactPage() {
           <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col items-center gap-3">
             <div className="flex -space-x-3 mb-1">
               {[
-                "bg-gradient-to-br from-pink-400 to-red-400",
-                "bg-gradient-to-br from-orange-400 to-yellow-300",
-                "bg-gradient-to-br from-purple-400 to-indigo-500",
+                "bg-gradient-to-br from-blue-400 to-blue-600",
+                "bg-gradient-to-br from-[#0084FF] to-cyan-300",
+                "bg-gradient-to-br from-[#0A1128] to-slate-700",
               ].map((g, i) => (
                 <div
                   key={i}
@@ -301,18 +298,18 @@ export default function ContactPage() {
             {/* Title */}
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 leading-tight">
               Let's Create Something<br />
-              <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#0084FF] to-[#0A1128] bg-clip-text text-transparent">
                 Amazing Together
               </span>
             </h2>
 
             {/* Subtitle with colored accent lines */}
             <div className="flex items-center mt-3">
-              <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-purple-400" />
+              <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-blue-400" />
               <p className="text-xs text-gray-500 font-medium px-3">
                 Share your idea with us and let's turn it into reality.
               </p>
-              <div className="h-[1px] w-8 bg-gradient-to-r from-orange-400 to-transparent" />
+              <div className="h-[1px] w-8 bg-gradient-to-r from-[#0084FF] to-transparent" />
             </div>
           </div>
 
@@ -332,7 +329,7 @@ export default function ContactPage() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full pl-9 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent transition"
+                  className="w-full pl-9 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition"
                   required
                 />
               </div>
@@ -350,7 +347,7 @@ export default function ContactPage() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="Work Email"
-                  className="w-full pl-9 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent transition"
+                  className="w-full pl-9 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition"
                   required
                 />
               </div>
@@ -370,7 +367,7 @@ export default function ContactPage() {
                 value={form.company}
                 onChange={handleChange}
                 placeholder="Company (Optional)"
-                className="w-full pl-9 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent transition"
+                className="w-full pl-9 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition"
               />
             </div>
 
@@ -381,7 +378,7 @@ export default function ContactPage() {
               value={form.subject}
               onChange={handleChange}
               placeholder="How can we help you?"
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent transition"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition"
               required
             />
 
@@ -392,7 +389,7 @@ export default function ContactPage() {
               onChange={handleChange}
               placeholder="Tell us more about your project or question..."
               rows={4}
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent transition resize-none"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition resize-none"
               required
             />
 
@@ -401,7 +398,7 @@ export default function ContactPage() {
               type="submit"
               className="w-full py-3.5 rounded-xl text-white font-semibold text-sm tracking-wide shadow-md transition-all duration-200 hover:opacity-90 active:scale-[0.98] flex items-center justify-center gap-2"
               style={{
-                background: "linear-gradient(90deg, #7C3AED 0%, #EC4899 50%, #F97316 100%)",
+                background: "linear-gradient(90deg, #0084FF 0%, #0070DA 50%, #0A1128 100%)",
               }}
             >
               {submitted ? (
