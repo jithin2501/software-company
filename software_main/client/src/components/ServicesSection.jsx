@@ -54,15 +54,12 @@ export default function ServicesSection({ activeTab, setActiveTab }) {
 
         {/* Section Header */}
         <div className="text-center flex flex-col items-center gap-2 mb-4">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-[1.5px] bg-[#0A1128]" />
-            <span className="text-xs font-semibold tracking-widest text-[#0A1128] uppercase">
-              Our Best Services
-            </span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A1128] leading-tight max-w-xl mt-2">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A1128] leading-tight max-w-xl">
             Best <span className="text-[#0084FF]">Innovative Solution</span> for Businesses
           </h2>
+          <p className="text-sm md:text-base text-gray-500 font-medium max-w-2xl mx-auto mt-2 leading-relaxed">
+            We offer customized digital services tailored to your business needs, helping you streamline operations, enhance user experiences, and drive sustainable growth.
+          </p>
         </div>
 
         {/* Core Layout Card */}

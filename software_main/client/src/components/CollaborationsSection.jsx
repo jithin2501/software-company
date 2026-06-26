@@ -285,9 +285,8 @@ export default function CollaborationsSection() {
         
         {/* Section Header */}
         <div className="text-center flex flex-col items-center gap-3">
-          <h2 className="text-3xl md:text-4.5xl font-black leading-tight">
-            <span className="text-[#F57C00] bg-clip-text">Strategic</span>{" "}
-            <span className="text-[#0084FF]">Collaborations</span>
+          <h2 className="text-3xl md:text-4.5xl font-black leading-tight text-[#0A1128]">
+            Strategic <span className="text-[#0084FF]">Collaborations</span>
           </h2>
           <p className="text-sm md:text-base text-gray-500 max-w-2xl leading-relaxed mt-1">
             Fostering growth through unified digital intelligence.

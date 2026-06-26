@@ -175,10 +175,8 @@ export default function TrustedLeadersSection() {
 
         {/* Section Header */}
         <div className="text-center flex flex-col items-center gap-3">
-          <h2 className="text-3xl md:text-4.5xl font-black leading-tight">
-            <span className="text-[#F57C00]">Trusted by</span>{" "}
-            <span className="text-[#0084FF]">Industry</span>{" "}
-            <span className="text-[#F57C00]">Leaders</span>
+          <h2 className="text-3xl md:text-4.5xl font-black leading-tight text-[#0A1128]">
+            Trusted by <span className="text-[#0084FF]">Industry Leaders</span>
           </h2>
           <p className="text-sm md:text-base text-gray-500 max-w-xl leading-relaxed mt-1">
             We partner with forward-thinking companies and startups around the world
@@ -197,8 +195,8 @@ export default function TrustedLeadersSection() {
                 <marker id="arrow-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                   <path d="M 0 0 L 10 5 L 0 10 z" fill="#0084FF" />
                 </marker>
-                <marker id="arrow-orange" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#F57C00" />
+                <marker id="arrow-navy" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0A1128" />
                 </marker>
               </defs>
 
@@ -216,18 +214,18 @@ export default function TrustedLeadersSection() {
 
               {/* Right Dotted Concentric Orbits */}
               {/* Inner orbit: Touches grey ring at top/bottom, curves through Adobe (750, 230) */}
-              <path d="M 619 142 Q 881 230 619 318" stroke="#F57C00" strokeWidth="1.5" strokeDasharray="5 5" opacity="0.6" />
+              <path d="M 619 142 Q 881 230 619 318" stroke="#0A1128" strokeWidth="1.5" strokeDasharray="5 5" opacity="0.6" />
               {/* Outer orbit: Google (720, 120) -> AWS -> Notion -> Stripe -> HubSpot (700, 360) */}
-              <path d="M 720 120 Q 1080 240 700 360" stroke="#F57C00" strokeWidth="1.5" strokeDasharray="5 5" opacity="0.6" />
+              <path d="M 720 120 Q 1080 240 700 360" stroke="#0A1128" strokeWidth="1.5" strokeDasharray="5 5" opacity="0.6" />
 
               {/* Outer Node Circle next to Notion */}
-              <circle cx="895" cy="240" r="5.5" fill="#F57C00" />
+              <circle cx="895" cy="240" r="5.5" fill="#0A1128" />
 
               {/* Top-Left Verified Partner Curved Double Arrow */}
               <path d="M 280 35 Q 338.5 35 397 107" stroke="#0084FF" strokeWidth="1.5" strokeDasharray="4 4" markerEnd="url(#arrow-blue)" markerStart="url(#arrow-blue)" />
 
               {/* Top-Right 500+ Clients Curved Double Arrow */}
-              <path d="M 720 35 Q 661.5 35 603 107" stroke="#F57C00" strokeWidth="1.5" strokeDasharray="4 4" markerEnd="url(#arrow-orange)" markerStart="url(#arrow-orange)" />
+              <path d="M 720 35 Q 661.5 35 603 107" stroke="#0A1128" strokeWidth="1.5" strokeDasharray="4 4" markerEnd="url(#arrow-navy)" markerStart="url(#arrow-navy)" />
             </svg>
 
             {/* Central Globe Block */}
@@ -272,14 +270,14 @@ export default function TrustedLeadersSection() {
             </div>
 
             <div className="absolute left-[82%] top-[35px] -translate-x-1/2 -translate-y-1/2 z-20 flex items-center gap-3 bg-white px-4 py-3 rounded-2xl shadow-md border border-gray-50 w-[185px]">
-              <div className="w-8 h-8 rounded-full bg-orange-50 text-[#F57C00] flex items-center justify-center flex-shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#0A1128]/5 text-[#0A1128] flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                   <circle cx="9" cy="7" r="4" />
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] font-black text-[#F57C00] uppercase tracking-wider">500+</span>
+                <span className="text-[10px] font-black text-[#0A1128] uppercase tracking-wider">500+</span>
                 <span className="text-[9px] font-bold text-gray-400">Happy Clients</span>
               </div>
             </div>

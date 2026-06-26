@@ -17,25 +17,11 @@ const STEPS = [
   },
   {
     number: "02",
-    title: "Quality Control",
-    desc: "Rigorous testing and debugging to ensure a seamless, bug-free, and high-performance product.",
+    title: "Strategy",
+    desc: "Developing a comprehensive roadmap that outlines technical architecture and project milestones.",
     color: "#F57C00",
     bgLight: "bg-orange-50/50",
     textClass: "text-[#F57C00]",
-    icon: (
-      <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        <path d="m9 11 2 2 4-4" />
-      </svg>
-    ),
-  },
-  {
-    number: "03",
-    title: "Strategy",
-    desc: "Developing a comprehensive roadmap that outlines technical architecture and project milestones.",
-    color: "#6366F1",
-    bgLight: "bg-indigo-50/50",
-    textClass: "text-[#6366F1]",
     icon: (
       <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
         <path d="M18 20V10M12 20V4M6 20v-6" />
@@ -43,12 +29,12 @@ const STEPS = [
     ),
   },
   {
-    number: "04",
+    number: "03",
     title: "Prototyping",
     desc: "Rapidly visualizing concepts to test usability and flow, ensuring the user experience is flawless from the start.",
-    color: "#A855F7",
-    bgLight: "bg-purple-50/50",
-    textClass: "text-[#A855F7]",
+    color: "#6366F1",
+    bgLight: "bg-indigo-50/50",
+    textClass: "text-[#6366F1]",
     icon: (
       <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
         <rect x="3" y="3" width="7" height="7" rx="1" />
@@ -59,15 +45,29 @@ const STEPS = [
     ),
   },
   {
-    number: "05",
+    number: "04",
     title: "Engineering",
     desc: "Transforming designs into high-quality code using the latest technologies and best practices.",
+    color: "#A855F7",
+    bgLight: "bg-purple-50/50",
+    textClass: "text-[#A855F7]",
+    icon: (
+      <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16" />
+      </svg>
+    ),
+  },
+  {
+    number: "05",
+    title: "Quality Control",
+    desc: "Rigorous testing and debugging to ensure a seamless, bug-free, and high-performance product.",
     color: "#EC4899",
     bgLight: "bg-pink-50/50",
     textClass: "text-[#EC4899]",
     icon: (
       <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-        <path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16" />
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="m9 11 2 2 4-4" />
       </svg>
     ),
   },
@@ -93,17 +93,15 @@ export default function MethodologySection() {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-16">
 
         {/* Section Header */}
-        <div className="text-center flex flex-col items-center gap-3">
-          <span className="px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest bg-blue-50 text-[#0084FF] border border-blue-100/50 shadow-sm mb-2">
-            Methodology
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black text-center leading-tight tracking-tight max-w-4xl mx-auto">
-            <span className="text-[#F57C00]">Always Giving You </span>
-            <span className="text-[#0084FF]">Exactly</span>
-            <span className="text-[#F57C00]"> What You</span>
+        <div className="text-center flex flex-col items-center gap-2">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center leading-tight tracking-tight max-w-xl mx-auto text-[#0A1128]">
+            Always <span className="text-[#0084FF]">Giving You Exactly</span>
             <br className="hidden md:inline" />
-            <span className="text-[#F57C00]"> Need</span>
+            What You Need
           </h2>
+          <p className="text-sm md:text-base text-gray-500 font-medium max-w-2xl mx-auto mt-2">
+            We follow a structured and transparent process to turn your ideas into high-quality software, ensuring we deliver value at every step.
+          </p>
         </div>
 
         {/* Responsive Grid/Flex Row of Steps */}
