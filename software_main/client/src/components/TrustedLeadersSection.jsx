@@ -187,7 +187,7 @@ export default function TrustedLeadersSection() {
         </div>
 
         {/* Network Orbit Diagram */}
-        <div className="relative w-full min-h-[460px] flex items-center justify-center overflow-hidden py-4">
+        <div className="relative w-full min-h-[460px] flex items-center justify-center overflow-hidden py-4 mt-[-24px]">
           <div className="relative w-[1000px] h-[460px] scale-[0.65] sm:scale-[0.8] md:scale-[0.95] lg:scale-100 origin-center flex-shrink-0 flex items-center justify-center">
 
             {/* SVG Orbit Lines Background */}
@@ -304,7 +304,7 @@ export default function TrustedLeadersSection() {
         </div>
 
         {/* Divider and Continuous Scrolling Carousel */}
-        <div className="w-full flex flex-col gap-6 mt-4">
+        <div className="w-full flex flex-col gap-6 mt-[-64px]">
 
           <div className="w-full flex items-center justify-between gap-4">
             <div className="flex-1 h-[1px] bg-gray-200" />
@@ -333,7 +333,7 @@ export default function TrustedLeadersSection() {
         </div>
 
         {/* Four Column Statistics Box */}
-        <div className="bg-white rounded-[28px] shadow-md border border-gray-50 p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 relative overflow-hidden mt-6">
+        <div className="bg-white rounded-[28px] shadow-md border border-gray-50 p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 relative overflow-hidden mt-[-32px]">
           {STATS.map((stat, index) => (
             <div
               key={stat.label}
