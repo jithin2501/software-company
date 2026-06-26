@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import ContactPage from "./pages/ContactPage";
 import ServicesSection from "./components/ServicesSection";
+import CollaborationsSection from "./components/CollaborationsSection";
 
 export default function App() {
   const [view, setView] = useState("landing");
@@ -21,6 +22,7 @@ export default function App() {
         <>
           <LandingPage setView={setView} />
           <ServicesSection activeTab={activeServiceTab} setActiveTab={setActiveServiceTab} />
+          <CollaborationsSection />
         </>
       ) : (
         <ContactPage />
