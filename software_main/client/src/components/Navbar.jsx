@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const NAV_LINKS = ["Home", "About", "Services", "Portfolio", "Review", "Contact"];
+const NAV_LINKS = ["Home", "About", "Services", "Portfolio", "Contact"];
 
 export default function Navbar({ currentView, setView, setActiveServiceTab }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,62 +52,24 @@ export default function Navbar({ currentView, setView, setActiveServiceTab }) {
       <nav className="hidden md:flex items-center gap-8">
         {NAV_LINKS.map((link) => (
           <div key={link} className="relative">
-            {link === "Services" ? (
-              <button
-                onClick={() => setServicesOpen((o) => !o)}
-                className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-[#0084FF] transition-colors cursor-pointer"
-              >
-                {link}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </button>
-            ) : (
-              <button
-                onClick={() => setView(link.toLowerCase() === "contact" ? "contact" : "landing")}
-                className={`text-sm font-medium transition-colors cursor-pointer relative ${(link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact")
-                  ? "text-gray-900 font-semibold"
-                  : "text-gray-600 hover:text-[#0084FF]"
-                  }`}
-              >
-                {link}
-                {((link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact")) && (
-                  <span className="block h-0.5 w-full bg-[#0084FF] rounded-full mt-0.5 absolute -bottom-1 left-0" />
-                )}
-              </button>
-            )}
-
-            {/* Services dropdown */}
-            {link === "Services" && servicesOpen && (
-              <div className="absolute top-8 left-0 bg-white shadow-xl rounded-xl py-2 w-48 z-50 border border-gray-100">
-                {[
-                  "Web Design",
-                  "SEO & Growth",
-                  "App Development",
-                  "Branding",
-                  "Cloud Computing",
-                  "Data Protection",
-                ].map((s, index) => (
-                  <a
-                    key={s}
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setView("landing");
-                      setActiveServiceTab(index);
-                      setServicesOpen(false);
-                      setTimeout(() => {
-                        const el = document.getElementById("services");
-                        if (el) el.scrollIntoView({ behavior: "smooth" });
-                      }, 100);
-                    }}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:text-[#0084FF] hover:bg-blue-50 transition-colors"
-                  >
-                    {s}
-                  </a>
-                ))}
-              </div>
-            )}
+            <button
+              onClick={() => {
+                if (link === "Services") {
+                  setView("services");
+                } else {
+                  setView(link.toLowerCase() === "contact" ? "contact" : "landing");
+                }
+              }}
+              className={`text-sm font-medium transition-colors cursor-pointer relative ${(link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact") || (link === "Services" && currentView === "services")
+                ? "text-gray-900 font-semibold"
+                : "text-gray-600 hover:text-[#0084FF]"
+                }`}
+            >
+              {link}
+              {(((link === "Home" && currentView === "landing") || (link === "Contact" && currentView === "contact") || (link === "Services" && currentView === "services")) && (
+                <span className="block h-0.5 w-full bg-[#0084FF] rounded-full mt-0.5 absolute -bottom-1 left-0" />
+              ))}
+            </button>
           </div>
         ))}
       </nav>
@@ -157,11 +119,7 @@ export default function Navbar({ currentView, setView, setActiveServiceTab }) {
               onClick={() => {
                 setMenuOpen(false);
                 if (link === "Services") {
-                  setView("landing");
-                  setTimeout(() => {
-                    const el = document.getElementById("services");
-                    if (el) el.scrollIntoView({ behavior: "smooth" });
-                  }, 100);
+                  setView("services");
                 } else {
                   setView(link.toLowerCase() === "contact" ? "contact" : "landing");
                 }

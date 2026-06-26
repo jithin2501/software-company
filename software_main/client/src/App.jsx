@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import ContactPage from "./pages/ContactPage";
+import ServicesPage from "./pages/ServicesPage";
 import ServicesSection from "./components/ServicesSection";
 import CollaborationsSection from "./components/CollaborationsSection";
 import TrustedLeadersSection from "./components/TrustedLeadersSection";
@@ -28,6 +29,8 @@ export default function App() {
           <TrustedLeadersSection />
           <MethodologySection />
         </>
+      ) : view === "services" ? (
+        <ServicesPage setView={setView} />
       ) : (
         <ContactPage />
       )}
