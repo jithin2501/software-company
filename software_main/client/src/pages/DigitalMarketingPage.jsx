@@ -127,7 +127,7 @@ export default function DigitalMarketingPage({ setView }) {
   }, []);
 
   return (
-    <div className="w-full bg-[#fcfcff] min-h-[calc(100vh-72px)] py-6 font-sans relative overflow-hidden">
+    <div className="w-full bg-[#f9fafb] min-h-[calc(100vh-72px)] py-6 font-sans relative overflow-hidden">
       {/* Dynamic Keyframe Animations for Card Load and Floating Effects */}
       <style>{`
         @keyframes lift-in {
@@ -750,6 +750,236 @@ export default function DigitalMarketingPage({ setView }) {
                   Generate consistent leads and sales while staying ahead of your competitors.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 🚀 OUR DESIGN PROCESS SECTION */}
+      <div className="relative bg-white py-24 overflow-hidden border-t border-slate-100/60">
+        
+        {/* Decorative Grid Pattern (Top-Left) */}
+        <div className="absolute top-12 left-12 w-44 h-24 bg-[radial-gradient(#e2e8f0_2px,transparent_2px)] [background-size:14px_14px] opacity-70 pointer-events-none hidden md:block" />
+        
+        {/* Decorative Diagonal Lines (Top-Right) */}
+        <div className="absolute top-12 right-12 w-48 h-48 bg-[linear-gradient(45deg,#f1f5f9_10%,transparent_10%,transparent_50%,#f1f5f9_50%,#f1f5f9_60%,transparent_60%)] [background-size:12px_12px] opacity-40 pointer-events-none hidden md:block" />
+
+        <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+          <div className="text-center flex flex-col items-center mb-16">
+            {/* Main Title */}
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] tracking-tight leading-tight mb-4">
+              A Simple & Effective <span className="text-[#0084FF]">Design Process</span>
+            </h2>
+
+            {/* Subtext */}
+            <p className="text-slate-500 font-medium max-w-xl text-sm md:text-base leading-relaxed">
+              A structured approach that ensures every project is delivered with precision, creativity, and results.
+            </p>
+          </div>
+
+          {/* Steps Timeline Container */}
+          <div className="relative max-w-5xl mx-auto mt-20 mb-16">
+            
+            {/* Horizontal Timeline Row (Desktop) / Vertical Stack (Mobile) */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 lg:gap-4 relative z-10">
+              
+              {/* Step 1 */}
+              <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
+                
+                {/* 01 header with line */}
+                <div className="flex flex-col items-center mb-6">
+                  <span className="text-xl font-black text-[#7c3aed]">01</span>
+                  <div className="w-12 h-[2.5px] bg-[#7c3aed] rounded-full mt-1.5" />
+                </div>
+
+                {/* Hexagon Shape Container */}
+                <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(124,58,237,0.12)]">
+                  {/* Hexagon Background SVG */}
+                  <svg className="absolute inset-0 w-full h-full text-white fill-current stroke-violet-50/50" strokeWidth="1" viewBox="0 0 100 100">
+                    <polygon points="50,3 93,25 93,75 50,97 7,75 7,25" />
+                  </svg>
+                  {/* Glass Inner Hexagon */}
+                  <div className="absolute w-[86px] h-[86px] bg-violet-50/40 rounded-[14px] flex items-center justify-center z-10" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}>
+                    <svg className="w-10 h-10 text-[#7c3aed]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <path d="M6 21h12M12 17v4" strokeLinecap="round" />
+                      <circle cx="12" cy="10" r="3" />
+                      <path d="M14.25 12.25l2.25 2.25" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Step Text */}
+                <div className="mt-2 flex flex-col items-center">
+                  <span className="text-[11px] font-extrabold text-[#7c3aed] uppercase tracking-wider mb-1">Step 1</span>
+                  <h3 className="text-base font-black text-[#0A1128] mb-3">Website Audit</h3>
+                  <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
+                    We conduct a comprehensive audit to identify strengths, weaknesses, and opportunities.
+                  </p>
+                </div>
+              </div>
+
+              {/* Chevron Connector 1 (Desktop) */}
+              <div className="hidden lg:flex items-center justify-center h-28 mt-[60px]">
+                <svg className="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
+                
+                {/* 02 header with line */}
+                <div className="flex flex-col items-center mb-6">
+                  <span className="text-xl font-black text-[#0084FF]">02</span>
+                  <div className="w-12 h-[2.5px] bg-[#0084FF] rounded-full mt-1.5" />
+                </div>
+
+                {/* Diamond Shape Container */}
+                <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(0,132,255,0.12)]">
+                  {/* Diamond background shape */}
+                  <div className="absolute w-[80px] h-[80px] bg-white border border-blue-50/50 rotate-45 flex items-center justify-center">
+                    <div className="w-[66px] h-[66px] bg-blue-50/40 rounded-lg" />
+                  </div>
+                  {/* Icon */}
+                  <div className="absolute z-10">
+                    <svg className="w-10 h-10 text-[#0084FF]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                      <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5a2 2 0 002 2h2a2 2 0 002-2" strokeLinecap="round" />
+                      <path d="M8 11h.01M8 15h.01M12 11l2 2m0-2l-2 2" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Step Text */}
+                <div className="mt-2 flex flex-col items-center">
+                  <span className="text-[11px] font-extrabold text-[#0084FF] uppercase tracking-wider mb-1">Step 2</span>
+                  <h3 className="text-base font-black text-[#0A1128] mb-3">Strategy Development</h3>
+                  <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
+                    Based on insights, we create a tailored SEO strategy aligned with your business objectives.
+                  </p>
+                </div>
+              </div>
+
+              {/* Chevron Connector 2 (Desktop) */}
+              <div className="hidden lg:flex items-center justify-center h-28 mt-[60px]">
+                <svg className="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
+                
+                {/* 03 header with line */}
+                <div className="flex flex-col items-center mb-6">
+                  <span className="text-xl font-black text-[#10b981]">03</span>
+                  <div className="w-12 h-[2.5px] bg-[#10b981] rounded-full mt-1.5" />
+                </div>
+
+                {/* Circle Shape Container */}
+                <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(16,185,129,0.12)]">
+                  <div className="w-[96px] h-[96px] rounded-full bg-white border border-emerald-50/50 flex items-center justify-center">
+                    <div className="w-[80px] h-[80px] rounded-full bg-emerald-50/40 flex items-center justify-center">
+                      <svg className="w-10 h-10 text-[#10b981]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2-2-2-2m6 0l-2 2 2 2" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step Text */}
+                <div className="mt-2 flex flex-col items-center">
+                  <span className="text-[11px] font-extrabold text-[#10b981] uppercase tracking-wider mb-1">Step 3</span>
+                  <h3 className="text-base font-black text-[#0A1128] mb-3">Implementation</h3>
+                  <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
+                    Our team executes on-page, technical, and off-page SEO techniques.
+                  </p>
+                </div>
+              </div>
+
+              {/* Chevron Connector 3 (Desktop) */}
+              <div className="hidden lg:flex items-center justify-center h-28 mt-[60px]">
+                <svg className="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
+                
+                {/* 04 header with line */}
+                <div className="flex flex-col items-center mb-6">
+                  <span className="text-xl font-black text-[#f97316]">04</span>
+                  <div className="w-12 h-[2.5px] bg-[#f97316] rounded-full mt-1.5" />
+                </div>
+
+                {/* Triangle Shape Container */}
+                <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(249,115,22,0.12)]">
+                  {/* Play/Triangle shape background */}
+                  <div className="absolute w-[94px] h-[94px] bg-white border border-orange-50/50 flex items-center justify-center" style={{ clipPath: 'polygon(15% 5%, 95% 50%, 15% 95%)' }}>
+                    <div className="w-[78px] h-[78px] bg-orange-50/40 rounded-md" />
+                  </div>
+                  {/* Icon */}
+                  <div className="absolute z-10 translate-x-[-4px]">
+                    <svg className="w-10 h-10 text-[#f97316]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M18.75 7.5l-6 6-3-3-4.5 4.5" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 7.5h3.75V11.25" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Step Text */}
+                <div className="mt-2 flex flex-col items-center">
+                  <span className="text-[11px] font-extrabold text-[#f97316] uppercase tracking-wider mb-1">Step 4</span>
+                  <h3 className="text-base font-black text-[#0A1128] mb-3">Optimization</h3>
+                  <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
+                    We continuously track performance and optimize campaigns for better results.
+                  </p>
+                </div>
+              </div>
+
+              {/* Chevron Connector 4 (Desktop) */}
+              <div className="hidden lg:flex items-center justify-center h-28 mt-[60px]">
+                <svg className="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+
+              {/* Step 5 */}
+              <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
+                
+                {/* 05 header with line */}
+                <div className="flex flex-col items-center mb-6">
+                  <span className="text-xl font-black text-[#6366f1]">05</span>
+                  <div className="w-12 h-[2.5px] bg-[#6366f1] rounded-full mt-1.5" />
+                </div>
+
+                {/* Squircle Shape Container */}
+                <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(99,102,241,0.12)]">
+                  <div className="w-[90px] h-[90px] rounded-[24px] bg-white border border-indigo-50/50 flex items-center justify-center">
+                    <div className="w-[74px] h-[74px] rounded-[20px] bg-indigo-50/40 flex items-center justify-center">
+                      <svg className="w-10 h-10 text-[#6366f1]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" strokeLinecap="round" />
+                        <path d="M14 2v6h6M8 12h3M8 16h3" strokeLinecap="round" />
+                        <circle cx="15.5" cy="14.5" r="2" />
+                        <path d="M15.5 12.5v2h2" strokeLinecap="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step Text */}
+                <div className="mt-2 flex flex-col items-center">
+                  <span className="text-[11px] font-extrabold text-[#6366f1] uppercase tracking-wider mb-1">Step 5</span>
+                  <h3 className="text-base font-black text-[#0A1128] mb-3">Reporting</h3>
+                  <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
+                    You receive detailed reports and insights to understand progress and ROI.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
