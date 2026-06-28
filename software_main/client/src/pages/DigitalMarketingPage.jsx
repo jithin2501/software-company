@@ -462,7 +462,7 @@ export default function DigitalMarketingPage({ setView }) {
         </div>
 
         {/* Services Grid */}
-        <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 mt-16 pb-16">
+        <div className="max-w-6xl mx-auto pl-12 pr-6 md:pl-20 md:pr-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 mt-16 pb-16">
           {MARKETING_SERVICES.map((service, index) => {
             const delay = index * 0.15; // Beautifully staggered delays per card
 
@@ -546,7 +546,7 @@ export default function DigitalMarketingPage({ setView }) {
       </div>
 
       {/* 🤝 WHY CHOOSE US SECTION */}
-      <div className="relative bg-[#fafbfe] py-24 overflow-hidden border-t border-slate-100/60">
+      <div className="relative bg-[#f9fafb] py-24 overflow-hidden">
 
         {/* Soft Background Accents */}
         <div className="absolute left-0 top-1/4 w-40 h-80 bg-gradient-to-r from-purple-100/20 to-transparent rounded-r-full blur-3xl pointer-events-none" />
@@ -756,16 +756,13 @@ export default function DigitalMarketingPage({ setView }) {
       </div>
 
       {/* 🚀 OUR DESIGN PROCESS SECTION */}
-      <div className="relative bg-white py-24 overflow-hidden border-t border-slate-100/60">
-        
-        {/* Decorative Grid Pattern (Top-Left) */}
-        <div className="absolute top-12 left-12 w-44 h-24 bg-[radial-gradient(#e2e8f0_2px,transparent_2px)] [background-size:14px_14px] opacity-70 pointer-events-none hidden md:block" />
-        
+      <div className="relative bg-[#f9fafb] py-24 overflow-hidden">
+
         {/* Decorative Diagonal Lines (Top-Right) */}
         <div className="absolute top-12 right-12 w-48 h-48 bg-[linear-gradient(45deg,#f1f5f9_10%,transparent_10%,transparent_50%,#f1f5f9_50%,#f1f5f9_60%,transparent_60%)] [background-size:12px_12px] opacity-40 pointer-events-none hidden md:block" />
 
         <div className="max-w-[1240px] mx-auto px-6 relative z-10">
-          <div className="text-center flex flex-col items-center mb-16">
+          <div className="text-center flex flex-col items-center mb-8">
             {/* Main Title */}
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] tracking-tight leading-tight mb-4">
               A Simple & Effective <span className="text-[#0084FF]">Design Process</span>
@@ -778,19 +775,13 @@ export default function DigitalMarketingPage({ setView }) {
           </div>
 
           {/* Steps Timeline Container */}
-          <div className="relative max-w-5xl mx-auto mt-20 mb-16">
-            
+          <div className="relative max-w-5xl mx-auto mt-2 mb-16">
+
             {/* Horizontal Timeline Row (Desktop) / Vertical Stack (Mobile) */}
             <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 lg:gap-4 relative z-10">
-              
+
               {/* Step 1 */}
               <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
-                
-                {/* 01 header with line */}
-                <div className="flex flex-col items-center mb-6">
-                  <span className="text-xl font-black text-[#7c3aed]">01</span>
-                  <div className="w-12 h-[2.5px] bg-[#7c3aed] rounded-full mt-1.5" />
-                </div>
 
                 {/* Hexagon Shape Container */}
                 <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(124,58,237,0.12)]">
@@ -809,18 +800,28 @@ export default function DigitalMarketingPage({ setView }) {
                   </div>
                 </div>
 
+                {/* Vertical Dotted Line & Ring Dot */}
+                <div className="flex flex-col items-center mb-4">
+                  <div className="w-[1.5px] h-6 border-l border-dashed border-[#7c3aed]" />
+                  <div className="w-[14px] h-[14px] rounded-full border-[3px] border-[#7c3aed] bg-white mt-1" />
+                </div>
+
                 {/* Step Text */}
                 <div className="mt-2 flex flex-col items-center">
                   <span className="text-[11px] font-extrabold text-[#7c3aed] uppercase tracking-wider mb-1">Step 1</span>
-                  <h3 className="text-base font-black text-[#0A1128] mb-3">Website Audit</h3>
+                  <h3 className="text-base font-black text-[#0A1128] mb-2">Website Audit</h3>
+
+                  {/* Title Divider */}
+                  <div className="w-10 h-[2px] bg-[#7c3aed] mb-3" />
+
                   <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
-                    We conduct a comprehensive audit to identify strengths, weaknesses, and opportunities.
+                    We conduct a comprehensive audit to identify strengths, weaknesses.
                   </p>
                 </div>
               </div>
 
               {/* Chevron Connector 1 (Desktop) */}
-              <div className="hidden lg:flex items-center justify-center h-28 mt-[60px]">
+              <div className="hidden lg:flex items-center justify-center h-28">
                 <svg className="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -828,12 +829,6 @@ export default function DigitalMarketingPage({ setView }) {
 
               {/* Step 2 */}
               <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
-                
-                {/* 02 header with line */}
-                <div className="flex flex-col items-center mb-6">
-                  <span className="text-xl font-black text-[#0084FF]">02</span>
-                  <div className="w-12 h-[2.5px] bg-[#0084FF] rounded-full mt-1.5" />
-                </div>
 
                 {/* Diamond Shape Container */}
                 <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(0,132,255,0.12)]">
@@ -850,18 +845,28 @@ export default function DigitalMarketingPage({ setView }) {
                   </div>
                 </div>
 
+                {/* Vertical Dotted Line & Ring Dot */}
+                <div className="flex flex-col items-center mb-4">
+                  <div className="w-[1.5px] h-6 border-l border-dashed border-[#0084FF]" />
+                  <div className="w-[14px] h-[14px] rounded-full border-[3px] border-[#0084FF] bg-white mt-1" />
+                </div>
+
                 {/* Step Text */}
                 <div className="mt-2 flex flex-col items-center">
                   <span className="text-[11px] font-extrabold text-[#0084FF] uppercase tracking-wider mb-1">Step 2</span>
-                  <h3 className="text-base font-black text-[#0A1128] mb-3">Strategy Development</h3>
+                  <h3 className="text-base font-black text-[#0A1128] mb-2">Strategy Development</h3>
+
+                  {/* Title Divider */}
+                  <div className="w-10 h-[2px] bg-[#0084FF] mb-3" />
+
                   <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
-                    Based on insights, we create a tailored SEO strategy aligned with your business objectives.
+                    Based on insights, we create a tailored SEO strategy aligned with your business.
                   </p>
                 </div>
               </div>
 
               {/* Chevron Connector 2 (Desktop) */}
-              <div className="hidden lg:flex items-center justify-center h-28 mt-[60px]">
+              <div className="hidden lg:flex items-center justify-center h-28">
                 <svg className="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -869,12 +874,6 @@ export default function DigitalMarketingPage({ setView }) {
 
               {/* Step 3 */}
               <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
-                
-                {/* 03 header with line */}
-                <div className="flex flex-col items-center mb-6">
-                  <span className="text-xl font-black text-[#10b981]">03</span>
-                  <div className="w-12 h-[2.5px] bg-[#10b981] rounded-full mt-1.5" />
-                </div>
 
                 {/* Circle Shape Container */}
                 <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(16,185,129,0.12)]">
@@ -888,10 +887,20 @@ export default function DigitalMarketingPage({ setView }) {
                   </div>
                 </div>
 
+                {/* Vertical Dotted Line & Ring Dot */}
+                <div className="flex flex-col items-center mb-4">
+                  <div className="w-[1.5px] h-6 border-l border-dashed border-[#10b981]" />
+                  <div className="w-[14px] h-[14px] rounded-full border-[3px] border-[#10b981] bg-white mt-1" />
+                </div>
+
                 {/* Step Text */}
                 <div className="mt-2 flex flex-col items-center">
                   <span className="text-[11px] font-extrabold text-[#10b981] uppercase tracking-wider mb-1">Step 3</span>
-                  <h3 className="text-base font-black text-[#0A1128] mb-3">Implementation</h3>
+                  <h3 className="text-base font-black text-[#0A1128] mb-2">Implementation</h3>
+
+                  {/* Title Divider */}
+                  <div className="w-10 h-[2px] bg-[#10b981] mb-3" />
+
                   <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
                     Our team executes on-page, technical, and off-page SEO techniques.
                   </p>
@@ -899,7 +908,7 @@ export default function DigitalMarketingPage({ setView }) {
               </div>
 
               {/* Chevron Connector 3 (Desktop) */}
-              <div className="hidden lg:flex items-center justify-center h-28 mt-[60px]">
+              <div className="hidden lg:flex items-center justify-center h-28">
                 <svg className="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -907,12 +916,6 @@ export default function DigitalMarketingPage({ setView }) {
 
               {/* Step 4 */}
               <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
-                
-                {/* 04 header with line */}
-                <div className="flex flex-col items-center mb-6">
-                  <span className="text-xl font-black text-[#f97316]">04</span>
-                  <div className="w-12 h-[2.5px] bg-[#f97316] rounded-full mt-1.5" />
-                </div>
 
                 {/* Triangle Shape Container */}
                 <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(249,115,22,0.12)]">
@@ -930,10 +933,20 @@ export default function DigitalMarketingPage({ setView }) {
                   </div>
                 </div>
 
+                {/* Vertical Dotted Line & Ring Dot */}
+                <div className="flex flex-col items-center mb-4">
+                  <div className="w-[1.5px] h-6 border-l border-dashed border-[#f97316]" />
+                  <div className="w-[14px] h-[14px] rounded-full border-[3px] border-[#f97316] bg-white mt-1" />
+                </div>
+
                 {/* Step Text */}
                 <div className="mt-2 flex flex-col items-center">
                   <span className="text-[11px] font-extrabold text-[#f97316] uppercase tracking-wider mb-1">Step 4</span>
-                  <h3 className="text-base font-black text-[#0A1128] mb-3">Optimization</h3>
+                  <h3 className="text-base font-black text-[#0A1128] mb-2">Optimization</h3>
+
+                  {/* Title Divider */}
+                  <div className="w-10 h-[2px] bg-[#f97316] mb-3" />
+
                   <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
                     We continuously track performance and optimize campaigns for better results.
                   </p>
@@ -941,7 +954,7 @@ export default function DigitalMarketingPage({ setView }) {
               </div>
 
               {/* Chevron Connector 4 (Desktop) */}
-              <div className="hidden lg:flex items-center justify-center h-28 mt-[60px]">
+              <div className="hidden lg:flex items-center justify-center h-28">
                 <svg className="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -949,12 +962,6 @@ export default function DigitalMarketingPage({ setView }) {
 
               {/* Step 5 */}
               <div className="flex flex-col items-center text-center w-full lg:w-[170px] group relative">
-                
-                {/* 05 header with line */}
-                <div className="flex flex-col items-center mb-6">
-                  <span className="text-xl font-black text-[#6366f1]">05</span>
-                  <div className="w-12 h-[2.5px] bg-[#6366f1] rounded-full mt-1.5" />
-                </div>
 
                 {/* Squircle Shape Container */}
                 <div className="relative w-28 h-28 flex items-center justify-center mb-6 drop-shadow-[0_10px_15px_rgba(99,102,241,0.12)]">
@@ -970,10 +977,20 @@ export default function DigitalMarketingPage({ setView }) {
                   </div>
                 </div>
 
+                {/* Vertical Dotted Line & Ring Dot */}
+                <div className="flex flex-col items-center mb-4">
+                  <div className="w-[1.5px] h-6 border-l border-dashed border-[#6366f1]" />
+                  <div className="w-[14px] h-[14px] rounded-full border-[3px] border-[#6366f1] bg-white mt-1" />
+                </div>
+
                 {/* Step Text */}
                 <div className="mt-2 flex flex-col items-center">
                   <span className="text-[11px] font-extrabold text-[#6366f1] uppercase tracking-wider mb-1">Step 5</span>
-                  <h3 className="text-base font-black text-[#0A1128] mb-3">Reporting</h3>
+                  <h3 className="text-base font-black text-[#0A1128] mb-2">Reporting</h3>
+
+                  {/* Title Divider */}
+                  <div className="w-10 h-[2px] bg-[#6366f1] mb-3" />
+
                   <p className="text-slate-500 text-[12.5px] leading-relaxed font-medium">
                     You receive detailed reports and insights to understand progress and ROI.
                   </p>
