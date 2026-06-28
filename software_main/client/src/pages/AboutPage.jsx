@@ -118,6 +118,166 @@ export default function AboutPage({ setView }) {
 
         </div>
       </div>
+
+      {/* Stats Bar */}
+      <div className="w-full bg-[#f97316] py-12 mt-20 md:mt-28 relative z-10">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+          <div className="flex flex-col items-center">
+            <span className="text-4xl md:text-5xl font-black text-white mb-2">680+</span>
+            <span className="text-xs font-bold text-white/95 uppercase tracking-widest">Business Trust Us</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-4xl md:text-5xl font-black text-white mb-2">1,354+</span>
+            <span className="text-xs font-bold text-white/95 uppercase tracking-widest">Projects Done</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-4xl md:text-5xl font-black text-white mb-2">97%</span>
+            <span className="text-xs font-bold text-white/95 uppercase tracking-widest">Success Rate</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-4xl md:text-5xl font-black text-white mb-2">15Y+</span>
+            <span className="text-xs font-bold text-white/95 uppercase tracking-widest">Years Of Experience</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Mission, Vision & Values Section */}
+      <div className="max-w-[1240px] mx-auto px-6 md:px-12 py-24 md:py-32 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 justify-items-center">
+
+          {/* Card 1: Mission */}
+          <div className="relative w-full max-w-[290px] bg-white rounded-[28px] shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-slate-100/50 flex flex-col items-center text-center p-8 pt-0 min-h-[380px] z-10">
+            {/* Top Cap */}
+            <div className="w-full h-8 bg-[#f59e0b] rounded-t-[27px] -mx-8 mb-6" style={{ width: 'calc(100% + 64px)' }} />
+
+            {/* Icon */}
+            <div className="w-16 h-16 rounded-full border border-slate-100 flex items-center justify-center shadow-sm bg-white mb-4 z-10">
+              <svg className="w-8 h-8 text-[#0A1128]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="11" cy="12" r="6" strokeWidth="1.8" />
+                <circle cx="11" cy="12" r="1.5" fill="currentColor" />
+                <path d="M11 12h9" strokeWidth="1.8" strokeLinecap="round" />
+                <circle cx="20" cy="12" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+
+            {/* Title Row */}
+            <div className="w-full flex items-center justify-center relative mt-2 mb-4 z-10">
+              <h3 className="text-[#0A1128] text-base font-black uppercase tracking-[0.2em] bg-white px-3 relative z-10">
+                MISSION
+              </h3>
+            </div>
+
+            {/* Text Description */}
+            <p className="text-slate-400 text-xs sm:text-[13px] leading-relaxed font-medium z-10">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            {/* SVG Outline */}
+            <svg className="absolute inset-0 pointer-events-none overflow-visible w-full h-full z-0" viewBox="0 0 290 380" fill="none">
+              <path
+                d="M 100 180 L 16 180 A 16 16 0 0 0 0 196 L 0 364 A 16 16 0 0 0 16 380 L 274 380 A 16 16 0 0 0 290 364 L 290 196 A 16 16 0 0 1 306 180 L 342 180"
+                stroke="#f97316"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+              <circle cx="100" cy="180" r="4.5" fill="#f97316" />
+              <circle cx="342" cy="180" r="4.5" fill="#f97316" />
+            </svg>
+          </div>
+
+          {/* Card 2: Vision */}
+          <div className="relative w-full max-w-[290px] bg-white rounded-[28px] shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-slate-100/50 flex flex-col items-center text-center p-8 pt-0 min-h-[380px] z-10">
+            {/* Top Cap */}
+            <div className="w-full h-8 bg-[#06b6d4] rounded-t-[27px] -mx-8 mb-6" style={{ width: 'calc(100% + 64px)' }} />
+
+            {/* Icon */}
+            <div className="w-16 h-16 rounded-full border border-slate-100 flex items-center justify-center shadow-sm bg-white mb-4 z-10">
+              <svg className="w-8 h-8 text-[#0A1128]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M6 14h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2z" strokeWidth="1.8" />
+                <path d="M10 14a2 2 0 0 1 4 0" strokeWidth="1.8" />
+                <path d="M4 10h-2m18 0h2" strokeWidth="1.5" />
+                <path d="M12 4V2M7.5 5L6 3.5M16.5 5L18 3.5" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </div>
+
+            {/* Title Row */}
+            <div className="w-full flex items-center justify-center relative mt-2 mb-4 z-10">
+              <h3 className="text-[#0A1128] text-base font-black uppercase tracking-[0.2em] bg-white px-3 relative z-10">
+                VISION
+              </h3>
+            </div>
+
+            {/* Text Description */}
+            <p className="text-slate-400 text-xs sm:text-[13px] leading-relaxed font-medium z-10">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            {/* SVG Outline */}
+            <svg className="absolute inset-0 pointer-events-none overflow-visible w-full h-full z-0" viewBox="0 0 290 380" fill="none">
+              {/* Blue Top/Right Wrap Outline */}
+              <path
+                d="M -52 180 L -28 180 A 16 16 0 0 1 -12 164 L -12 16 A 28 28 0 0 1 16 -12 L 274 -12 A 28 28 0 0 1 302 16 L 302 164 A 16 16 0 0 0 318 180 L 350 180"
+                stroke="#06b6d4"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+              <circle cx="-52" cy="180" r="4.5" fill="#06b6d4" />
+              <circle cx="350" cy="180" r="4.5" fill="#06b6d4" />
+
+              {/* Blue line from VISION text */}
+              <path
+                d="M 100 180 L 16 180 A 16 16 0 0 0 0 196 L 0 212 A 16 16 0 0 1 -16 228 L -52 228"
+                stroke="#06b6d4"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+              <circle cx="100" cy="180" r="4.5" fill="#06b6d4" />
+              <circle cx="-52" cy="228" r="4.5" fill="#06b6d4" />
+            </svg>
+          </div>
+
+          {/* Card 3: Values */}
+          <div className="relative w-full max-w-[290px] bg-white rounded-[28px] shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-slate-100/50 flex flex-col items-center text-center p-8 pt-0 min-h-[380px] z-10">
+            {/* Top Cap */}
+            <div className="w-full h-8 bg-[#0A1128] rounded-t-[27px] -mx-8 mb-6" style={{ width: 'calc(100% + 64px)' }} />
+
+            {/* Icon */}
+            <div className="w-16 h-16 rounded-full border border-slate-100 flex items-center justify-center shadow-sm bg-white mb-4 z-10">
+              <svg className="w-8 h-8 text-[#0A1128]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M12 5v14M8 19h8" strokeWidth="1.8" strokeLinecap="round" />
+                <path d="M5 8h14" strokeWidth="1.8" strokeLinecap="round" />
+                <path d="M5 8l-2.5 6h5L5 8z M5 14v2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M19 8l-2.5 6h5L19 8z M19 14v2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+
+            {/* Title */}
+            <div className="w-full flex items-center justify-center relative mt-2 mb-4 z-10">
+              <h3 className="text-[#0A1128] text-base font-black uppercase tracking-[0.2em] bg-white px-3 relative z-10">
+                VALUES
+              </h3>
+            </div>
+
+            {/* Text Description */}
+            <p className="text-slate-400 text-xs sm:text-[13px] leading-relaxed font-medium z-10">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            {/* SVG Outline */}
+            <svg className="absolute inset-0 pointer-events-none overflow-visible w-full h-full z-0" viewBox="0 0 290 380" fill="none">
+              <path
+                d="M 100 180 L 16 180 A 16 16 0 0 0 0 196 L 0 364 A 16 16 0 0 0 16 380 L 274 380 A 16 16 0 0 0 290 364 L 290 196 A 16 16 0 0 1 306 180 L 350 180"
+                stroke="#0A1128"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+              <circle cx="100" cy="180" r="4.5" fill="#0A1128" />
+              <circle cx="350" cy="180" r="4.5" fill="#0A1128" />
+            </svg>
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }
