@@ -628,10 +628,10 @@ export default function DigitalMarketingPage({ setView }) {
                     <path d="M 419 31 A 45 45 0 0 0 374 76 C 374 98, 358 120, 338 112" stroke="#0084FF" strokeWidth="2.5" strokeLinecap="round" />
 
                     {/* Green line (Bottom-Left) */}
-                    <path d="M 81 279 A 45 45 0 0 1 126 324 C 126 302, 142 280, 162 288" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 81 279 A 45 45 0 0 1 126 324 C 126 346, 142 280, 162 288" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" />
 
                     {/* Orange line (Bottom-Right) */}
-                    <path d="M 419 279 A 45 45 0 0 0 374 324 C 374 302, 358 280, 338 288" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 419 279 A 45 45 0 0 0 374 324 C 374 346, 358 280, 338 288" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
 
                     {/* Mini Ring Dots */}
                     <circle cx="250" cy="75" r="4.5" fill="#7c3aed" />
@@ -666,30 +666,12 @@ export default function DigitalMarketingPage({ setView }) {
                   <div className="w-[145px] h-[145px] rounded-full bg-indigo-50/50 flex items-center justify-center">
 
                     {/* Concentric Layer 1 (Inner White Circle containing logo) */}
-                    <div className="w-[100px] h-[100px] rounded-full bg-white shadow-md border border-slate-100 flex items-center justify-center">
-                      <svg className="w-14 h-14" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                        {/* Staggered squares on the left */}
-                        <rect x="28" y="38" width="7" height="7" rx="1.5" fill="#7c3aed" />
-                        <rect x="35" y="47" width="9" height="9" rx="2" fill="#4f46e5" />
-                        <rect x="28" y="59" width="8" height="8" rx="2" fill="#3b82f6" />
-                        <rect x="36" y="70" width="6.5" height="6.5" rx="1.5" fill="#6366f1" />
-
-                        {/* Thick D curve handle */}
-                        <path
-                          d="M51 35 C66 35, 76 42, 76 52.5 C76 63, 66 70, 51 70"
-                          stroke="url(#dGradCenter)"
-                          strokeWidth="11.5"
-                          strokeLinecap="round"
-                          fill="none"
-                        />
-                        <defs>
-                          <linearGradient id="dGradCenter" x1="51" y1="35" x2="76" y2="70" gradientUnits="userSpaceOnUse">
-                            <stop stopColor="#7c3aed" />
-                            <stop offset="1" stopColor="#4f46e5" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
+                    <div className="w-[100px] h-[100px] rounded-full bg-white shadow-md border border-slate-100 flex items-center justify-center overflow-hidden p-3.5">
+                      <img
+                        src="/images/navbar/logo.png"
+                        alt="Zentrivo Technologies Logo"
+                        className="w-full h-full object-contain"
+                      />
                     </div>
 
                   </div>
