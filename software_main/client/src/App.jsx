@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import ContactPage from "./pages/ContactPage";
 import ServicesPage from "./pages/ServicesPage";
+import DigitalMarketingPage from "./pages/DigitalMarketingPage";
 import ServicesSection from "./components/ServicesSection";
 import CollaborationsSection from "./components/CollaborationsSection";
 import TrustedLeadersSection from "./components/TrustedLeadersSection";
@@ -31,6 +32,8 @@ export default function App() {
         </>
       ) : view === "services" ? (
         <ServicesPage setView={setView} />
+      ) : view === "digital-marketing" ? (
+        <DigitalMarketingPage setView={setView} />
       ) : (
         <ContactPage />
       )}
