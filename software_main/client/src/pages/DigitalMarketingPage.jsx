@@ -558,11 +558,8 @@ export default function DigitalMarketingPage({ setView }) {
           <div className="text-center flex flex-col items-center mb-8">
 
             {/* Main Title */}
-            <h2 className="text-3xl md:text-5xl font-black text-[#0A1128] tracking-tight leading-tight mb-4">
-              Why Businesses Choose <br className="md:hidden" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-600">
-                Digital Elite Services?
-              </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] tracking-tight leading-tight mb-4">
+              Why Businesses Choose <span className="text-[#0084FF]">Digital Elite Services?</span>
             </h2>
 
             {/* Subtext */}
@@ -610,67 +607,53 @@ export default function DigitalMarketingPage({ setView }) {
                 {/* Background Connecting Lines & Dotted Circle SVG */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 400" fill="none">
                   <g>
-                    {/* Dashed Circle Ring */}
-                    <circle cx="250" cy="200" r="125" stroke="#e2e8f0" strokeWidth="1.5" strokeDasharray="6,6" />
+                    {/* Dashed Circle Ring divided into colored quadrants */}
+                    {/* Top-Left (Purple) */}
+                    <path d="M 125 200 A 125 125 0 0 1 250 75" stroke="#7c3aed" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.35" />
+
+                    {/* Top-Right (Blue) */}
+                    <path d="M 250 75 A 125 125 0 0 1 375 200" stroke="#0084FF" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.35" />
+
+                    {/* Bottom-Right (Orange) */}
+                    <path d="M 375 200 A 125 125 0 0 1 250 325" stroke="#f97316" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.35" />
+
+                    {/* Bottom-Left (Green) */}
+                    <path d="M 250 325 A 125 125 0 0 1 125 200" stroke="#10b981" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.35" />
 
                     {/* Connecting S-Curve Lines (joining the outer circles to the central concentric circle card edge) */}
                     {/* Purple line (Top-Left) */}
-                    <path d="M 81 31 A 45 45 0 0 1 126 76 C 126 98, 145 105, 165 105 C 175 105, 178 112, 180 120" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 81 31 A 45 45 0 0 1 126 76 C 126 98, 142 120, 162 112" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" />
 
                     {/* Blue line (Top-Right) */}
-                    <path d="M 419 31 A 45 45 0 0 0 374 76 C 374 98, 355 105, 335 105 C 325 105, 322 112, 320 120" stroke="#0084FF" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 419 31 A 45 45 0 0 0 374 76 C 374 98, 358 120, 338 112" stroke="#0084FF" strokeWidth="2.5" strokeLinecap="round" />
 
                     {/* Green line (Bottom-Left) */}
-                    <path d="M 81 279 A 45 45 0 0 1 126 324 C 126 302, 145 295, 165 295 C 175 295, 178 288, 180 280" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 81 279 A 45 45 0 0 1 126 324 C 126 302, 142 280, 162 288" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" />
 
                     {/* Orange line (Bottom-Right) */}
-                    <path d="M 419 279 A 45 45 0 0 0 374 324 C 374 302, 355 295, 335 295 C 325 295, 322 288, 320 280" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 419 279 A 45 45 0 0 0 374 324 C 374 302, 358 280, 338 288" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
 
                     {/* Mini Ring Dots */}
                     <circle cx="250" cy="75" r="4.5" fill="#7c3aed" />
                     <circle cx="250" cy="325" r="4.5" fill="#4f46e5" />
                     <circle cx="125" cy="200" r="4.5" fill="#10b981" />
-                    <circle cx="375" cy="200" r="4.5" fill="none" stroke="#0084FF" strokeWidth="2.5" />
+                    <circle cx="375" cy="200" r="4.5" fill="#0084FF" />
 
                     {/* Chevron Decals (>>>) */}
                     {/* Top-Left Arrow */}
-                    <g transform="translate(162, 126) rotate(-45)">
+                    <g transform="translate(181, 96) rotate(-45)">
                       <path d="M-5 -3 L0 0 L-5 3 M0 -3 L5 0 L0 3" stroke="#7c3aed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </g>
                     {/* Bottom-Left Arrow */}
-                    <g transform="translate(162, 274) rotate(45)">
+                    <g transform="translate(181, 304) rotate(45)">
                       <path d="M-5 -3 L0 0 L-5 3 M0 -3 L5 0 L0 3" stroke="#10b981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </g>
                     {/* Bottom-Right Arrow */}
-                    <g transform="translate(338, 274) rotate(-45)">
+                    <g transform="translate(355, 268) rotate(-45)">
                       <path d="M-5 -3 L0 0 L-5 3 M0 -3 L5 0 L0 3" stroke="#f97316" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </g>
 
-                    {/* Green Dot Grid (3x3) under bottom-left path */}
-                    <g fill="#10b981" opacity="0.5">
-                      <circle cx="185" cy="310" r="1.5" />
-                      <circle cx="193" cy="310" r="1.5" />
-                      <circle cx="201" cy="310" r="1.5" />
-                      <circle cx="185" cy="318" r="1.5" />
-                      <circle cx="193" cy="318" r="1.5" />
-                      <circle cx="201" cy="318" r="1.5" />
-                      <circle cx="185" cy="326" r="1.5" />
-                      <circle cx="193" cy="326" r="1.5" />
-                      <circle cx="201" cy="326" r="1.5" />
-                    </g>
 
-                    {/* Orange Dot Grid (3x3) under bottom-right path */}
-                    <g fill="#f97316" opacity="0.5">
-                      <circle cx="299" cy="310" r="1.5" />
-                      <circle cx="307" cy="310" r="1.5" />
-                      <circle cx="315" cy="310" r="1.5" />
-                      <circle cx="299" cy="318" r="1.5" />
-                      <circle cx="307" cy="318" r="1.5" />
-                      <circle cx="315" cy="318" r="1.5" />
-                      <circle cx="299" cy="326" r="1.5" />
-                      <circle cx="307" cy="326" r="1.5" />
-                      <circle cx="315" cy="326" r="1.5" />
-                    </g>
                   </g>
 
                 </svg>
