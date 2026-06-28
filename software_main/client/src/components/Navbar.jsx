@@ -120,13 +120,21 @@ export default function Navbar({ currentView, setView, setActiveServiceTab }) {
           const isActive =
             (link === "Home" && currentView === "landing") ||
             (link === "Contact" && currentView === "contact") ||
+            (link === "About" && currentView === "about") ||
             (link === "Services" && isServicesActive);
 
           return (
             <div key={link} className="relative py-2">
               <button
                 onClick={() => {
-                  setView(link.toLowerCase() === "contact" ? "contact" : "landing");
+                  const targetView = link.toLowerCase() === "home"
+                    ? "landing"
+                    : link.toLowerCase() === "contact"
+                      ? "contact"
+                      : link.toLowerCase() === "about"
+                        ? "about"
+                        : "landing";
+                  setView(targetView);
                 }}
                 className={`text-sm font-medium transition-colors cursor-pointer relative ${
                   isActive ? "text-gray-900 font-semibold" : "text-gray-600 hover:text-[#0084FF]"
@@ -234,14 +242,22 @@ export default function Navbar({ currentView, setView, setActiveServiceTab }) {
 
             const isActive =
               (link === "Home" && currentView === "landing") ||
-              (link === "Contact" && currentView === "contact");
+              (link === "Contact" && currentView === "contact") ||
+              (link === "About" && currentView === "about");
 
             return (
               <button
                 key={link}
                 onClick={() => {
                   setMenuOpen(false);
-                  setView(link.toLowerCase() === "contact" ? "contact" : "landing");
+                  const targetView = link.toLowerCase() === "home"
+                    ? "landing"
+                    : link.toLowerCase() === "contact"
+                      ? "contact"
+                      : link.toLowerCase() === "about"
+                        ? "about"
+                        : "landing";
+                  setView(targetView);
                 }}
                 className={`text-left text-sm font-medium transition-colors cursor-pointer ${
                   isActive ? "text-gray-900 font-semibold" : "text-gray-700 hover:text-[#0084FF]"
