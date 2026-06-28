@@ -46,18 +46,15 @@ export default function AboutPage({ setView }) {
 
             {/* About Us Eyebrow */}
             <div className="flex items-center gap-2 mb-1 lg:-ml-20">
-              <div className="w-8 h-[2px] bg-[#f97316] rounded-full" />
-              <span className="text-[#f97316] text-[13px] font-black tracking-widest uppercase">
+              <div className="w-8 h-[2px] bg-[#0084FF] rounded-full" />
+              <span className="text-[#0084FF] text-[13px] font-black tracking-widest uppercase">
                 About Us
               </span>
             </div>
 
             {/* Title / Heading */}
             <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#0A1128] leading-[1.15] tracking-tight mb-3 lg:-ml-20 lg:-mt-2">
-              <span className="text-[#f97316]">Creating</span>{" "}
-              <span className="text-[#0084FF]">digital experiences</span>{" "}
-              <span className="text-[#0084FF]">focused</span>{" "}
-              <span className="text-[#f97316]">on design and performance.</span>
+              Creating <span className="text-[#0084FF]">digital experiences</span> focused on design and performance.
             </h1>
 
             {/* Indented Content Block (Staggered layout matching design) */}
@@ -71,9 +68,9 @@ export default function AboutPage({ setView }) {
               {/* Info Section: Stats Card & Checklist */}
               <div className="flex flex-col sm:flex-row items-center gap-8 w-full mb-4">
 
-                {/* Stats Card (Soft Yellow background) */}
-                <div className="w-full sm:w-[155px] h-[135px] bg-[#fef9c3] rounded-3xl flex flex-col items-center justify-center text-center p-4 shadow-sm border border-yellow-100/50">
-                  <span className="text-4xl font-extrabold text-[#f97316] mb-1">
+                {/* Stats Card (Soft Blue background) */}
+                <div className="w-full sm:w-[155px] h-[135px] bg-[#f0f7ff] rounded-3xl flex flex-col items-center justify-center text-center p-4 shadow-sm border border-blue-100/60">
+                  <span className="text-4xl font-extrabold text-[#0084FF] mb-1">
                     25+
                   </span>
                   <span className="text-xs font-black text-[#0A1128] uppercase tracking-wide leading-tight">
@@ -90,12 +87,12 @@ export default function AboutPage({ setView }) {
                     "Results-Driven Marketing"
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <span className="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#f97316] flex-shrink-0">
+                      <span className="w-5 h-5 rounded-full bg-blue-100/80 flex items-center justify-center text-[#0084FF] flex-shrink-0">
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                       </span>
-                      <span className="text-[#0A1128] text-sm font-extrabold tracking-wide">
+                      <span className="text-slate-500 font-medium text-sm sm:text-[15px] tracking-wide">
                         {item}
                       </span>
                     </div>
@@ -107,7 +104,7 @@ export default function AboutPage({ setView }) {
               {/* CTA Button */}
               <button
                 onClick={() => setView("contact")}
-                className="bg-[#f97316] hover:bg-[#e06613] text-white text-sm font-extrabold px-7 py-4 rounded-full shadow-md shadow-orange-100 transition-all duration-200 hover:scale-[1.03] flex items-center gap-2 cursor-pointer"
+                className="bg-[#0084FF] hover:bg-[#0070DA] text-white text-sm font-extrabold px-7 py-4 rounded-full shadow-md shadow-blue-100 transition-all duration-200 hover:scale-[1.03] flex items-center gap-2 cursor-pointer"
               >
                 Discover More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
