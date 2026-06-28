@@ -607,31 +607,31 @@ export default function DigitalMarketingPage({ setView }) {
                 {/* Background Connecting Lines & Dotted Circle SVG */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 400" fill="none">
                   <g>
-                    {/* Dashed Circle Ring divided into colored quadrants */}
+                    {/* Solid Circle Ring divided into colored quadrants */}
                     {/* Top-Left (Purple) */}
-                    <path d="M 125 200 A 125 125 0 0 1 250 75" stroke="#7c3aed" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.35" />
+                    <path d="M 125 200 A 125 125 0 0 1 250 75" stroke="#7c3aed" strokeWidth="1.5" opacity="0.7" />
 
                     {/* Top-Right (Blue) */}
-                    <path d="M 250 75 A 125 125 0 0 1 375 200" stroke="#0084FF" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.35" />
+                    <path d="M 250 75 A 125 125 0 0 1 375 200" stroke="#0084FF" strokeWidth="1.5" opacity="0.7" />
 
                     {/* Bottom-Right (Orange) */}
-                    <path d="M 375 200 A 125 125 0 0 1 250 325" stroke="#f97316" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.35" />
+                    <path d="M 375 200 A 125 125 0 0 1 250 325" stroke="#f97316" strokeWidth="1.5" opacity="0.7" />
 
                     {/* Bottom-Left (Green) */}
-                    <path d="M 250 325 A 125 125 0 0 1 125 200" stroke="#10b981" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.35" />
+                    <path d="M 250 325 A 125 125 0 0 1 125 200" stroke="#10b981" strokeWidth="1.5" opacity="0.7" />
 
                     {/* Connecting S-Curve Lines (joining the outer circles to the central concentric circle card edge) */}
                     {/* Purple line (Top-Left) */}
-                    <path d="M 81 31 A 45 45 0 0 1 126 76 C 126 98, 142 120, 162 112" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 81 31 A 45 45 0 0 1 126 76 C 126 98, 142 120, 162 112" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" opacity="0.7" />
 
                     {/* Blue line (Top-Right) */}
-                    <path d="M 419 31 A 45 45 0 0 0 374 76 C 374 98, 358 120, 338 112" stroke="#0084FF" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 419 31 A 45 45 0 0 0 374 76 C 374 98, 358 120, 338 112" stroke="#0084FF" strokeWidth="2.5" strokeLinecap="round" opacity="0.7" />
 
                     {/* Green line (Bottom-Left) */}
-                    <path d="M 81 279 A 45 45 0 0 1 126 324 C 126 346, 142 280, 162 288" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 81 279 A 45 45 0 0 1 126 324 C 126 346, 142 280, 162 288" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" opacity="0.7" />
 
                     {/* Orange line (Bottom-Right) */}
-                    <path d="M 419 279 A 45 45 0 0 0 374 324 C 374 346, 358 280, 338 288" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 419 279 A 45 45 0 0 0 374 324 C 374 346, 358 280, 338 288" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" opacity="0.7" />
 
                     {/* Mini Ring Dots */}
                     <circle cx="250" cy="75" r="4.5" fill="#7c3aed" />
