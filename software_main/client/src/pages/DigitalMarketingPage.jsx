@@ -302,13 +302,13 @@ export default function DigitalMarketingPage({ setView }) {
 
         {/* Right Column Graphic Circle */}
         <div className="flex items-center justify-center relative min-h-[480px] lg:min-h-[500px] overflow-hidden lg:overflow-visible w-full">
-          
+
           {/* Main graphic absolute wrapper (Increased width & responsive scale) */}
           <div className="relative w-[600px] h-[460px] flex items-center justify-center scale-[0.6] min-[400px]:scale-[0.7] sm:scale-[0.85] lg:scale-100 lg:translate-x-4 origin-center transition-transform duration-300">
-            
+
             {/* Symmetrical Outer Dashed Dotted Circle Ring */}
             <div className="absolute w-[463px] h-[463px] rounded-full border border-indigo-100 border-dashed animate-spin-[200s_linear_infinite]" />
-            
+
             {/* Main central circle containing digital.png (Borderless with smooth crop) */}
             <div className="absolute w-[330px] h-[330px] rounded-full bg-gradient-to-tr from-purple-100/40 to-blue-50/40 overflow-hidden z-10">
               <img
@@ -448,7 +448,7 @@ export default function DigitalMarketingPage({ setView }) {
       <div id="core-services" className="relative scroll-mt-20 pt-16 md:pt-24 lg:pt-28">
         {/* Page Header */}
         <div className="max-w-6xl mx-auto px-6 text-center flex flex-col items-center mb-10">
-          
+
 
           {/* Heading Title (Matches Website Brand) */}
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] tracking-tight leading-tight mb-4">
@@ -542,6 +542,251 @@ export default function DigitalMarketingPage({ setView }) {
               </div>
             );
           })}
+        </div>
+      </div>
+
+      {/* 🤝 WHY CHOOSE US SECTION */}
+      <div className="relative bg-[#fafbfe] py-24 overflow-hidden border-t border-slate-100/60">
+
+        {/* Soft Background Accents */}
+        <div className="absolute left-0 top-1/4 w-40 h-80 bg-gradient-to-r from-purple-100/20 to-transparent rounded-r-full blur-3xl pointer-events-none" />
+        <div className="absolute right-0 bottom-1/4 w-40 h-80 bg-gradient-to-l from-blue-100/20 to-transparent rounded-l-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+
+          {/* Header */}
+          <div className="text-center flex flex-col items-center mb-8">
+
+            {/* Main Title */}
+            <h2 className="text-3xl md:text-5xl font-black text-[#0A1128] tracking-tight leading-tight mb-4">
+              Why Businesses Choose <br className="md:hidden" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-600">
+                Digital Elite Services?
+              </span>
+            </h2>
+
+            {/* Subtext */}
+            <p className="text-slate-500 font-medium max-w-xl text-sm md:text-base leading-relaxed">
+              We help brands grow online with strategy, creativity, and performance that delivers real results.
+            </p>
+          </div>
+
+          {/* Three-Column Section Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-8 items-center max-w-6xl mx-auto">
+
+            {/* Left Column (01 & 03 Features) */}
+            <div className="flex flex-col gap-12 justify-center lg:h-[340px] order-2 lg:order-1">
+
+              {/* Item 01 */}
+              <div className="flex flex-col items-start lg:items-end text-left lg:text-right relative bg-white lg:bg-transparent p-6 lg:py-0 lg:pl-8 lg:pr-0 rounded-[20px] shadow-sm lg:shadow-none border border-slate-50 lg:border-none">
+                <div className="flex flex-col items-start lg:items-end mb-2.5">
+                  <span className="text-2xl font-black text-[#7c3aed]">01</span>
+                  <div className="w-8 h-[3px] bg-[#7c3aed] rounded-full mt-1 lg:ml-auto" />
+                </div>
+                <h3 className="text-lg font-bold text-[#0A1128] mb-2">Increase Visibility</h3>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-medium">
+                  Ensure your website ranks higher on search engines like Google, making it
+                </p>
+              </div>
+
+              {/* Item 03 */}
+              <div className="flex flex-col items-start lg:items-end text-left lg:text-right relative bg-white lg:bg-transparent p-6 lg:py-0 lg:pl-8 lg:pr-0 rounded-[20px] shadow-sm lg:shadow-none border border-slate-50 lg:border-none">
+                <div className="flex flex-col items-start lg:items-end mb-2.5">
+                  <span className="text-2xl font-black text-[#10b981]">03</span>
+                  <div className="w-8 h-[3px] bg-[#10b981] rounded-full mt-1 lg:ml-auto" />
+                </div>
+                <h3 className="text-lg font-bold text-[#0A1128] mb-2">Brand Credibility</h3>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-medium">
+                  Improve brand credibility and trust by appearing at the top of search results.
+                </p>
+              </div>
+
+            </div>
+
+            {/* Middle Column (Central Symmetrical Orbital Graphic) */}
+            <div className="flex justify-center items-center relative h-[420px] scale-[0.85] sm:scale-100 origin-center order-1 lg:order-2">
+              <div className="relative w-[500px] h-[400px] flex items-center justify-center">
+
+                {/* Background Connecting Lines & Dotted Circle SVG */}
+                <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 400" fill="none">
+                  <g>
+                    {/* Dashed Circle Ring */}
+                    <circle cx="250" cy="200" r="125" stroke="#e2e8f0" strokeWidth="1.5" strokeDasharray="6,6" />
+
+                    {/* Connecting S-Curve Lines (joining the outer circles to the central concentric circle card edge) */}
+                    {/* Purple line (Top-Left) */}
+                    <path d="M 81 31 A 45 45 0 0 1 126 76 C 126 98, 145 105, 165 105 C 175 105, 178 112, 180 120" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" />
+
+                    {/* Blue line (Top-Right) */}
+                    <path d="M 419 31 A 45 45 0 0 0 374 76 C 374 98, 355 105, 335 105 C 325 105, 322 112, 320 120" stroke="#0084FF" strokeWidth="2.5" strokeLinecap="round" />
+
+                    {/* Green line (Bottom-Left) */}
+                    <path d="M 81 279 A 45 45 0 0 1 126 324 C 126 302, 145 295, 165 295 C 175 295, 178 288, 180 280" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" />
+
+                    {/* Orange line (Bottom-Right) */}
+                    <path d="M 419 279 A 45 45 0 0 0 374 324 C 374 302, 355 295, 335 295 C 325 295, 322 288, 320 280" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
+
+                    {/* Mini Ring Dots */}
+                    <circle cx="250" cy="75" r="4.5" fill="#7c3aed" />
+                    <circle cx="250" cy="325" r="4.5" fill="#4f46e5" />
+                    <circle cx="125" cy="200" r="4.5" fill="#10b981" />
+                    <circle cx="375" cy="200" r="4.5" fill="none" stroke="#0084FF" strokeWidth="2.5" />
+
+                    {/* Chevron Decals (>>>) */}
+                    {/* Top-Left Arrow */}
+                    <g transform="translate(162, 126) rotate(-45)">
+                      <path d="M-5 -3 L0 0 L-5 3 M0 -3 L5 0 L0 3" stroke="#7c3aed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </g>
+                    {/* Bottom-Left Arrow */}
+                    <g transform="translate(162, 274) rotate(45)">
+                      <path d="M-5 -3 L0 0 L-5 3 M0 -3 L5 0 L0 3" stroke="#10b981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </g>
+                    {/* Bottom-Right Arrow */}
+                    <g transform="translate(338, 274) rotate(-45)">
+                      <path d="M-5 -3 L0 0 L-5 3 M0 -3 L5 0 L0 3" stroke="#f97316" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </g>
+
+                    {/* Green Dot Grid (3x3) under bottom-left path */}
+                    <g fill="#10b981" opacity="0.5">
+                      <circle cx="185" cy="310" r="1.5" />
+                      <circle cx="193" cy="310" r="1.5" />
+                      <circle cx="201" cy="310" r="1.5" />
+                      <circle cx="185" cy="318" r="1.5" />
+                      <circle cx="193" cy="318" r="1.5" />
+                      <circle cx="201" cy="318" r="1.5" />
+                      <circle cx="185" cy="326" r="1.5" />
+                      <circle cx="193" cy="326" r="1.5" />
+                      <circle cx="201" cy="326" r="1.5" />
+                    </g>
+
+                    {/* Orange Dot Grid (3x3) under bottom-right path */}
+                    <g fill="#f97316" opacity="0.5">
+                      <circle cx="299" cy="310" r="1.5" />
+                      <circle cx="307" cy="310" r="1.5" />
+                      <circle cx="315" cy="310" r="1.5" />
+                      <circle cx="299" cy="318" r="1.5" />
+                      <circle cx="307" cy="318" r="1.5" />
+                      <circle cx="315" cy="318" r="1.5" />
+                      <circle cx="299" cy="326" r="1.5" />
+                      <circle cx="307" cy="326" r="1.5" />
+                      <circle cx="315" cy="326" r="1.5" />
+                    </g>
+                  </g>
+
+                </svg>
+
+                {/* Concentric Layers (Concentric rings around center logo) */}
+                {/* Concentric Layer 3 (Outer Glassmorphic Circle) */}
+                <div className="absolute w-[190px] h-[190px] rounded-full bg-white/70 border border-indigo-50/50 shadow-md flex items-center justify-center z-10 top-[105px] left-[155px]">
+
+                  {/* Concentric Layer 2 (Middle Indigo Glow Ring) */}
+                  <div className="w-[145px] h-[145px] rounded-full bg-indigo-50/50 flex items-center justify-center">
+
+                    {/* Concentric Layer 1 (Inner White Circle containing logo) */}
+                    <div className="w-[100px] h-[100px] rounded-full bg-white shadow-md border border-slate-100 flex items-center justify-center">
+                      <svg className="w-14 h-14" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                        {/* Staggered squares on the left */}
+                        <rect x="28" y="38" width="7" height="7" rx="1.5" fill="#7c3aed" />
+                        <rect x="35" y="47" width="9" height="9" rx="2" fill="#4f46e5" />
+                        <rect x="28" y="59" width="8" height="8" rx="2" fill="#3b82f6" />
+                        <rect x="36" y="70" width="6.5" height="6.5" rx="1.5" fill="#6366f1" />
+
+                        {/* Thick D curve handle */}
+                        <path
+                          d="M51 35 C66 35, 76 42, 76 52.5 C76 63, 66 70, 51 70"
+                          stroke="url(#dGradCenter)"
+                          strokeWidth="11.5"
+                          strokeLinecap="round"
+                          fill="none"
+                        />
+                        <defs>
+                          <linearGradient id="dGradCenter" x1="51" y1="35" x2="76" y2="70" gradientUnits="userSpaceOnUse">
+                            <stop stopColor="#7c3aed" />
+                            <stop offset="1" stopColor="#4f46e5" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                {/* Outer Circle Icons */}
+                {/* 01 Increase Visibility (Top-Left) */}
+                <div className="absolute top-[40px] left-[45px] w-[72px] h-[72px] rounded-full bg-white shadow-[0_8px_30px_rgb(124,58,237,0.12)] border border-violet-100 flex items-center justify-center z-20">
+                  <div className="w-[58px] h-[58px] rounded-full bg-violet-50/50 flex items-center justify-center text-[#7c3aed]">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 20V10M12 20V4M6 20v-6" />
+                      <circle cx="18" cy="6" r="3" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* 02 High-Quality Traffic (Top-Right) */}
+                <div className="absolute top-[40px] right-[45px] w-[72px] h-[72px] rounded-full bg-white shadow-[0_8px_30px_rgb(0,132,255,0.12)] border border-blue-100 flex items-center justify-center z-20">
+                  <div className="w-[58px] h-[58px] rounded-full bg-blue-50/50 flex items-center justify-center text-[#0084FF]">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* 03 Brand Credibility (Bottom-Left) */}
+                <div className="absolute bottom-[40px] left-[45px] w-[72px] h-[72px] rounded-full bg-white shadow-[0_8px_30px_rgb(16,185,129,0.12)] border border-green-100 flex items-center justify-center z-20">
+                  <div className="w-[58px] h-[58px] rounded-full bg-green-50/50 flex items-center justify-center text-[#10b981]">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* 04 Consistent Leads (Bottom-Right) */}
+                <div className="absolute bottom-[40px] right-[45px] w-[72px] h-[72px] rounded-full bg-white shadow-[0_8px_30px_rgb(249,115,22,0.12)] border border-orange-100 flex items-center justify-center z-20">
+                  <div className="w-[58px] h-[58px] rounded-full bg-orange-50/50 flex items-center justify-center text-[#f97316]">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="9" />
+                      <circle cx="12" cy="12" r="5" />
+                      <circle cx="12" cy="12" r="1.5" />
+                      <path d="M17.5 6.5l3.5-3.5M21 3h-4M21 3v4" />
+                    </svg>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Right Column (02 & 04 Features) */}
+            <div className="flex flex-col gap-12 justify-center lg:h-[340px] order-3">
+
+              {/* Item 02 */}
+              <div className="flex flex-col items-start text-left relative bg-white lg:bg-transparent p-6 lg:p-0 rounded-[20px] shadow-sm lg:shadow-none border border-slate-50 lg:border-none">
+                <div className="flex flex-col items-start mb-2.5">
+                  <span className="text-2xl font-black text-[#0084FF]">02</span>
+                  <div className="w-8 h-[3px] bg-[#0084FF] rounded-full mt-1" />
+                </div>
+                <h3 className="text-lg font-bold text-[#0A1128] mb-2">High-Quality Traffic</h3>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-medium">
+                  Drive organic, high-intent traffic directly to your products and services.
+                </p>
+              </div>
+
+              {/* Item 04 */}
+              <div className="flex flex-col items-start text-left relative bg-white lg:bg-transparent p-6 lg:p-0 rounded-[20px] shadow-sm lg:shadow-none border border-slate-50 lg:border-none">
+                <div className="flex flex-col items-start mb-2.5">
+                  <span className="text-2xl font-black text-[#f97316]">04</span>
+                  <div className="w-8 h-[3px] bg-[#f97316] rounded-full mt-1" />
+                </div>
+                <h3 className="text-lg font-bold text-[#0A1128] mb-2">Consistent Leads</h3>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-medium">
+                  Generate consistent leads and sales while staying ahead of your competitors.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
