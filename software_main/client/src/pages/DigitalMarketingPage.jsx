@@ -235,7 +235,7 @@ export default function DigitalMarketingPage({ setView }) {
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-6 pb-12 grid grid-cols-1 lg:grid-cols-[4.2fr_5.8fr] gap-12 items-center relative z-10">
 
         {/* Left Column Content */}
-        <div className="flex flex-col items-start text-left gap-5">
+        <div className="flex flex-col items-start text-left lg:h-[460px] justify-between py-1">
           {/* Badge */}
           <div className="flex items-center gap-2 bg-[#f3e8ff] px-4 py-1.5 rounded-full">
             <span className="text-[#6b21a8] text-xs font-black tracking-wider uppercase flex items-center gap-1.5">
@@ -244,7 +244,7 @@ export default function DigitalMarketingPage({ setView }) {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#091133] leading-[1.08] tracking-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#091133] leading-[1.1] tracking-tight">
             <span className="whitespace-nowrap">We Build Strategies</span> <br />
             That Drive <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
@@ -253,12 +253,32 @@ export default function DigitalMarketingPage({ setView }) {
           </h1>
 
           {/* Paragraph */}
-          <p className="text-gray-500 font-medium text-sm md:text-base leading-relaxed max-w-lg mt-1">
+          <p className="text-gray-500 font-medium text-sm md:text-base leading-relaxed max-w-lg">
             Data-driven digital marketing solutions to help your brand attract the right audience, boost engagement, and maximize conversions.
           </p>
 
+          {/* Feature Highlights (Fills the vertical space beautifully) */}
+          <ul className="flex flex-col gap-3 my-1 text-[#091133] font-semibold text-xs md:text-sm">
+            <li className="flex items-center gap-3">
+              <span className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </span>
+              <span className="text-slate-600">Custom-built campaigns tailored to your specific audience.</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </span>
+              <span className="text-slate-600">Advanced attribution models for transparent, real-time ROI tracking.</span>
+            </li>
+          </ul>
+
           {/* Buttons */}
-          <div className="flex flex-wrap items-center gap-4 mt-2">
+          <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={() => setView("contact")}
               className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs md:text-sm font-extrabold px-6 py-3.5 rounded-full shadow-md shadow-indigo-100 transition-all duration-200 hover:scale-[1.03] flex items-center gap-2 cursor-pointer"
@@ -284,7 +304,7 @@ export default function DigitalMarketingPage({ setView }) {
         <div className="flex items-center justify-center relative min-h-[480px] lg:min-h-[500px] overflow-hidden lg:overflow-visible w-full">
           
           {/* Main graphic absolute wrapper (Increased width & responsive scale) */}
-          <div className="relative w-[600px] h-[460px] flex items-center justify-center scale-[0.6] min-[400px]:scale-[0.7] sm:scale-[0.85] lg:scale-100 lg:-translate-x-12 origin-center transition-transform duration-300">
+          <div className="relative w-[600px] h-[460px] flex items-center justify-center scale-[0.6] min-[400px]:scale-[0.7] sm:scale-[0.85] lg:scale-100 lg:translate-x-4 origin-center transition-transform duration-300">
             
             {/* Symmetrical Outer Dashed Dotted Circle Ring */}
             <div className="absolute w-[463px] h-[463px] rounded-full border border-indigo-100 border-dashed animate-spin-[200s_linear_infinite]" />
@@ -425,34 +445,15 @@ export default function DigitalMarketingPage({ setView }) {
 
 
       {/* 🛠️ CORE SERVICES SECTION */}
-      <div id="core-services" className="relative scroll-mt-20">
+      <div id="core-services" className="relative scroll-mt-20 pt-16 md:pt-24 lg:pt-28">
         {/* Page Header */}
-        <div className="max-w-6xl mx-auto px-6 text-center flex flex-col items-center gap-2 mb-10">
-          {/* Category Header Badge */}
-          <div className="flex items-center gap-3 mb-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#7c3aed]" />
-            <span className="w-8 h-[2px] bg-indigo-200 rounded-full" />
-            <span className="text-[11px] font-black text-[#7c3aed] uppercase tracking-[0.25em]">Our Core Services</span>
-            <span className="w-8 h-[2px] bg-indigo-200 rounded-full" />
-            <span className="w-1.5 h-1.5 rounded-full bg-[#7c3aed]" />
-          </div>
+        <div className="max-w-6xl mx-auto px-6 text-center flex flex-col items-center mb-10">
+          
 
-          {/* Dynamic Title with Colored Accent */}
-          <div className="relative inline-block mb-3">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] tracking-tight leading-tight">
-              Professional{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7c3aed] to-[#4f46e5]">
-                Digital Marketing
-              </span>{" "}
-              Services
-            </h2>
-            {/* Scribble Underline SVG */}
-            <div className="flex justify-center mt-1.5">
-              <svg className="w-56 h-4 text-[#7c3aed] opacity-80" viewBox="0 0 200 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 10 Q 50 2, 100 8 T 195 5" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-              </svg>
-            </div>
-          </div>
+          {/* Heading Title (Matches Website Brand) */}
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] tracking-tight leading-tight mb-4">
+            Professional <span className="text-[#0084FF]">Digital Marketing</span> Services
+          </h2>
 
           {/* Subtext */}
           <p className="text-gray-500 font-medium max-w-xl text-sm md:text-base leading-relaxed mt-2">
