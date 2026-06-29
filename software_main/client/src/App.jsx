@@ -10,6 +10,7 @@ import CollaborationsSection from "./components/CollaborationsSection";
 import TrustedLeadersSection from "./components/TrustedLeadersSection";
 import MethodologySection from "./components/MethodologySection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [view, setView] = useState("landing");
@@ -20,28 +21,31 @@ export default function App() {
   }, [view]);
 
   return (
-    <div className="min-h-screen font-sans">
-      <Navbar currentView={view} setView={setView} setActiveServiceTab={setActiveServiceTab} />
-      {/* Spacer to prevent fixed Navbar from covering content */}
-      <div className="h-[72px]"></div>
-      {view === "landing" ? (
-        <>
-          <LandingPage setView={setView} />
-          <ServicesSection activeTab={activeServiceTab} setActiveTab={setActiveServiceTab} />
-          <CollaborationsSection />
-          <TrustedLeadersSection />
-          <MethodologySection />
-          <TestimonialsSection />
-        </>
-      ) : view === "services" ? (
-        <ServicesPage setView={setView} />
-      ) : view === "digital-marketing" ? (
-        <DigitalMarketingPage setView={setView} />
-      ) : view === "about" ? (
-        <AboutPage setView={setView} />
-      ) : (
-        <ContactPage />
-      )}
+    <div className="min-h-screen font-sans flex flex-col justify-between">
+      <div>
+        <Navbar currentView={view} setView={setView} setActiveServiceTab={setActiveServiceTab} />
+        {/* Spacer to prevent fixed Navbar from covering content */}
+        <div className="h-[72px]"></div>
+        {view === "landing" ? (
+          <>
+            <LandingPage setView={setView} />
+            <ServicesSection activeTab={activeServiceTab} setActiveTab={setActiveServiceTab} />
+            <CollaborationsSection />
+            <TrustedLeadersSection />
+            <MethodologySection />
+            <TestimonialsSection />
+          </>
+        ) : view === "services" ? (
+          <ServicesPage setView={setView} />
+        ) : view === "digital-marketing" ? (
+          <DigitalMarketingPage setView={setView} />
+        ) : view === "about" ? (
+          <AboutPage setView={setView} />
+        ) : (
+          <ContactPage />
+        )}
+      </div>
+      <Footer setView={setView} />
     </div>
   );
 }
