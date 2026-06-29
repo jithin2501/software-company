@@ -76,18 +76,17 @@ export default function TestimonialsSection() {
     }
     return testimonial.quote;
   };
-
   return (
-    <section className="w-full bg-white py-24 md:py-32 relative overflow-hidden">
+    <section className="w-full bg-[#f9fafb] pt-16 pb-24 md:pt-20 md:pb-28 relative overflow-hidden">
       {/* Decorative Blur Backgrounds */}
-      <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-purple-50/60 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-blue-50/50 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-purple-50/60 rounded-full blur-[100px] pointer-events-none z-0" />
+      <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-blue-50/50 rounded-full blur-[120px] pointer-events-none z-0" />
 
-      <div className="max-w-[1240px] mx-auto px-6 md:px-12 flex flex-col gap-20">
+      <div className="max-w-[1240px] mx-auto px-6 md:px-12 flex flex-col gap-12 relative z-10">
         
         {/* Section Header */}
         <div className="text-center flex flex-col items-center gap-2">
-          <h2 className="text-3xl md:text-4xl font-black text-[#0A1128] tracking-tight mb-2">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center leading-tight tracking-tight max-w-3xl mx-auto text-[#0A1128]">
             What Our Clients Say About <span className="text-[#0084FF]">Our Solutions</span>
           </h2>
           <p className="text-sm md:text-base text-gray-500 font-medium max-w-xl mx-auto mt-2 leading-relaxed">
