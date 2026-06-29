@@ -9,6 +9,7 @@ import ServicesSection from "./components/ServicesSection";
 import CollaborationsSection from "./components/CollaborationsSection";
 import TrustedLeadersSection from "./components/TrustedLeadersSection";
 import MethodologySection from "./components/MethodologySection";
+import TestimonialsSection from "./components/TestimonialsSection";
 
 export default function App() {
   const [view, setView] = useState("landing");
@@ -30,6 +31,7 @@ export default function App() {
           <CollaborationsSection />
           <TrustedLeadersSection />
           <MethodologySection />
+          <TestimonialsSection />
         </>
       ) : view === "services" ? (
         <ServicesPage setView={setView} />
