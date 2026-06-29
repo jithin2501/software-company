@@ -142,7 +142,7 @@ export default function AboutPage({ setView }) {
       </div>
 
       {/* Mission, Vision & Values Section */}
-      <div className="max-w-[1240px] mx-auto px-6 md:px-12 py-24 md:py-32 relative z-10">
+      <div className="max-w-[1240px] mx-auto px-6 md:px-12 pt-24 md:pt-32 pb-16 md:pb-24 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-3">
@@ -240,39 +240,41 @@ export default function AboutPage({ setView }) {
       {/* Our Core Values Section */}
       <div className="max-w-[1240px] mx-auto px-6 md:px-12 pb-24 md:pb-32 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-5xl font-black text-[#0A1128] tracking-tight">
-            Our <span className="text-[#f97316]">Core</span> <span className="text-[#0084FF]">Values</span>
-          </h2>
-          <p className="text-slate-500 font-medium text-sm sm:text-[15px] mt-4">
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <div className="w-8 h-[2px] bg-[#0084FF] rounded-full" />
+            <span className="text-[#0084FF] text-[13px] font-black tracking-widest uppercase">Our Core Values</span>
+            <div className="w-8 h-[2px] bg-[#0084FF] rounded-full" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-black text-[#0A1128] tracking-tight">
             Guiding principles that shape our culture and drive our success
-          </p>
+          </h2>
         </div>
 
         {/* Desktop Interactive Layout */}
-        <div className="hidden lg:block relative w-[1144px] h-[520px] mx-auto">
+        <div className="hidden lg:block relative w-[1144px] h-[520px] mx-auto -mt-16">
           {/* SVG Dotted Connection Lines Canvas */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible" viewBox="0 0 1144 520" fill="none">
             {/* 01: Innovation (purple curve) */}
-            <path d="M 390 108 C 440 108, 480 160, 480 200" stroke="#8b5cf6" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
-            <circle cx="480" cy="200" r="4" fill="#8b5cf6" />
-
+            <path d="M 390 108 C 440 108, 468 160, 468 200" stroke="#8b5cf6" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
+            <circle cx="468" cy="200" r="4" fill="#8b5cf6" />
+ 
             {/* 02: Integrity (blue curve) */}
             <path d="M 754 108 C 704 108, 676 160, 676 200" stroke="#3b82f6" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="676" cy="200" r="4" fill="#3b82f6" />
-
+ 
             {/* 03: Collaboration (blue horizontal) */}
-            <path d="M 360 260 L 468 260" stroke="#0084FF" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
+            <path d="M 390 260 L 468 260" stroke="#0084FF" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="468" cy="260" r="4" fill="#0084FF" />
-
+ 
             {/* 06: Adaptability (green horizontal) */}
-            <path d="M 784 260 L 676 260" stroke="#10b981" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
+            <path d="M 754 260 L 676 260" stroke="#10b981" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="676" cy="260" r="4" fill="#10b981" />
-
+ 
             {/* 05: Client-Centric (purple curve) */}
             <path d="M 390 412 C 440 412, 468 360, 468 320" stroke="#a855f7" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="468" cy="320" r="4" fill="#a855f7" />
-
+ 
             {/* 04: Excellence (orange curve) */}
             <path d="M 754 412 C 704 412, 676 360, 676 320" stroke="#f97316" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="676" cy="320" r="4" fill="#f97316" />
@@ -300,7 +302,7 @@ export default function AboutPage({ setView }) {
             </div>
 
             {/* Card 3: Collaboration */}
-            <div className="group relative w-full h-[96px] bg-white border border-slate-100/80 rounded-full flex items-center px-6 shadow-[0_4px_25px_rgba(0,0,0,0.02)] hover:border-blue-100 hover:shadow-[0_10px_30px_rgba(0,132,255,0.06)] transition-all duration-300 hover:-translate-y-1">
+            <div className="group relative w-full h-[96px] bg-white border border-slate-100/80 rounded-full flex items-center px-6 shadow-[0_4px_25px_rgba(0,0,0,0.02)] hover:border-blue-100 hover:shadow-[0_10px_30px_rgba(0,132,255,0.06)] transition-all duration-300 hover:-translate-y-1 translate-x-[30px]">
               <div className="w-12 h-12 rounded-full border border-emerald-100 bg-emerald-50/50 flex items-center justify-center flex-shrink-0 text-emerald-500 group-hover:scale-105 transition-transform">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21.75c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
@@ -388,7 +390,7 @@ export default function AboutPage({ setView }) {
             </div>
 
             {/* Card 6: Adaptability */}
-            <div className="group relative w-full h-[96px] bg-white border border-slate-100/80 rounded-full flex flex-row-reverse items-center px-6 shadow-[0_4px_25px_rgba(0,0,0,0.02)] hover:border-emerald-100 hover:shadow-[0_10px_30px_rgba(16,185,129,0.06)] transition-all duration-300 hover:-translate-y-1">
+            <div className="group relative w-full h-[96px] bg-white border border-slate-100/80 rounded-full flex flex-row-reverse items-center px-6 shadow-[0_4px_25px_rgba(0,0,0,0.02)] hover:border-emerald-100 hover:shadow-[0_10px_30px_rgba(16,185,129,0.06)] transition-all duration-300 hover:-translate-y-1 -translate-x-[30px]">
               <div className="w-12 h-12 rounded-full border border-emerald-100 bg-emerald-50/50 flex items-center justify-center flex-shrink-0 text-emerald-500 group-hover:scale-105 transition-transform">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
@@ -426,7 +428,7 @@ export default function AboutPage({ setView }) {
         </div>
 
         {/* Mobile/Tablet Stacked Layout */}
-        <div className="lg:hidden flex flex-col items-center gap-8 max-w-[500px] mx-auto">
+        <div className="lg:hidden flex flex-col items-center gap-8 max-w-[500px] mx-auto -mt-16">
           {/* Logo center piece */}
           <div className="relative w-[180px] h-[180px] flex items-center justify-center">
             <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 300 300">
