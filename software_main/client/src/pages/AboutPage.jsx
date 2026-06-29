@@ -120,7 +120,7 @@ export default function AboutPage({ setView }) {
       </div>
 
       {/* Stats Bar */}
-      <div className="w-full bg-[#f97316] py-12 mt-20 md:mt-28 relative z-10">
+      <div className="w-full bg-[#0084FF] py-12 mt-20 md:mt-28 relative z-10">
         <div className="max-w-[1240px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
           <div className="flex flex-col items-center">
             <span className="text-4xl md:text-5xl font-black text-white mb-2">680+</span>
@@ -151,7 +151,7 @@ export default function AboutPage({ setView }) {
             <div className="w-8 h-[2px] bg-[#0084FF] rounded-full" />
           </div>
           <h2 className="text-3xl md:text-4xl font-black text-[#0A1128] tracking-tight">
-            The foundation of Zentrivo Technologies
+            The foundation of <span className="text-[#0084FF]">Zentrivo Technologies</span>
           </h2>
         </div>
 
@@ -247,7 +247,7 @@ export default function AboutPage({ setView }) {
             <div className="w-8 h-[2px] bg-[#0084FF] rounded-full" />
           </div>
           <h2 className="text-3xl md:text-4xl font-black text-[#0A1128] tracking-tight">
-            Guiding principles that shape our culture and drive our success
+            Guiding principles that shape <span className="text-[#0084FF]">our culture</span> and drive <span className="text-[#0084FF]">our success</span>
           </h2>
         </div>
 
