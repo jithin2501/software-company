@@ -258,23 +258,23 @@ export default function AboutPage({ setView }) {
             {/* 01: Innovation (purple curve) */}
             <path d="M 390 108 Q 459 108, 528 184" stroke="#8b5cf6" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="528" cy="184" r="4" fill="#8b5cf6" />
- 
+
             {/* 02: Integrity (blue curve) */}
             <path d="M 754 108 Q 685 108, 616 184" stroke="#3b82f6" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="616" cy="184" r="4" fill="#3b82f6" />
- 
+
             {/* 03: Collaboration (blue horizontal) */}
             <path d="M 390 260 L 468 260" stroke="#0084FF" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="468" cy="260" r="4" fill="#0084FF" />
- 
+
             {/* 06: Adaptability (green horizontal) */}
             <path d="M 754 260 L 676 260" stroke="#10b981" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="676" cy="260" r="4" fill="#10b981" />
- 
+
             {/* 05: Client-Centric (purple curve) */}
             <path d="M 390 412 Q 459 412, 528 336" stroke="#a855f7" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="528" cy="336" r="4" fill="#a855f7" />
- 
+
             {/* 04: Excellence (orange curve) */}
             <path d="M 754 412 Q 685 412, 616 336" stroke="#f97316" strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
             <circle cx="616" cy="336" r="4" fill="#f97316" />
