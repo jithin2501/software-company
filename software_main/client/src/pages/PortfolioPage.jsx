@@ -39,6 +39,96 @@ export default function PortfolioPage({ setView }) {
     },
   ];
 
+  const steps = [
+    {
+      number: "01",
+      title: "Discover",
+      description: "We understand your business, goals and target audience.",
+      numberColor: "text-indigo-600/90",
+      circleBg: "bg-indigo-50/70",
+      accentBg: "bg-indigo-500",
+      dotBg: "bg-indigo-500",
+      icon: (
+        <svg className="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.25">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      )
+    },
+    {
+      number: "02",
+      title: "Plan",
+      description: "We strategize and plan the best approach for your project.",
+      numberColor: "text-blue-600/90",
+      circleBg: "bg-blue-50/70",
+      accentBg: "bg-blue-500",
+      dotBg: "bg-blue-500",
+      icon: (
+        <svg className="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="8" y="2" width="8" height="4" rx="1" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          <path d="M12 11h4" />
+          <path d="M12 16h4" />
+          <path d="M8 11h.01" />
+          <path d="M8 16h.01" />
+        </svg>
+      )
+    },
+    {
+      number: "03",
+      title: "Design & Develop",
+      description: "We build scalable and high-quality solutions with modern technology.",
+      numberColor: "text-teal-600/90",
+      circleBg: "bg-teal-50/70",
+      accentBg: "bg-teal-500",
+      dotBg: "bg-teal-500",
+      icon: (
+        <svg className="w-8 h-8 text-teal-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="17 18 23 12 17 6" />
+          <polyline points="7 6 1 12 7 18" />
+          <line x1="14" y1="4" x2="10" y2="20" />
+        </svg>
+      )
+    },
+    {
+      number: "04",
+      title: "Test & Deploy",
+      description: "We test thoroughly and deploy with performance and security in mind.",
+      numberColor: "text-pink-600/90",
+      circleBg: "bg-pink-50/70",
+      accentBg: "bg-pink-500",
+      dotBg: "bg-pink-500",
+      icon: (
+        <svg className="w-8 h-8 text-pink-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
+          {/* Rocket Body */}
+          <path d="M12 2c0 0-4 3.5-4 8.5V17h8v-6.5c0-5-4-8.5-4-8.5z" />
+          {/* Base/Wings */}
+          <path d="M6 17h12l-2 4H8l-2-4z" />
+          {/* Window */}
+          <circle cx="12" cy="9.5" r="1.5" />
+        </svg>
+      )
+    },
+    {
+      number: "05",
+      title: "Support",
+      description: "We provide ongoing support and growth for your business.",
+      numberColor: "text-orange-600/90",
+      circleBg: "bg-orange-50/70",
+      accentBg: "bg-orange-500",
+      dotBg: "bg-orange-500",
+      icon: (
+        <svg className="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
+          {/* Headband */}
+          <path d="M 3 18 v -6 a 9 9 0 0 1 18 0 v 6" />
+          {/* Right Ear Pad */}
+          <path d="M 21 19 a 2 2 0 0 1 -2 2 h -1 a 2 2 0 0 1 -2 -2 v -3 a 2 2 0 0 1 2 -2 h 3 z" />
+          {/* Left Ear Pad */}
+          <path d="M 3 19 a 2 2 0 0 0 2 2 h 1 a 2 2 0 0 0 2 -2 v -3 a 2 2 0 0 0 -2 -2 H 3 z" />
+        </svg>
+      )
+    }
+  ];
+
   return (
     <div className="w-full bg-[#f9fafb] min-h-[calc(100vh-72px)] font-sans relative overflow-hidden">
       {/* Decorative background accents */}
@@ -203,13 +293,74 @@ export default function PortfolioPage({ setView }) {
           ))}
         </div>
 
+        {/* --- OUR PROCESS SECTION --- */}
+        <div className="mt-32 md:mt-40 border-t border-slate-100/80 pt-24 pb-12">
+          {/* Header */}
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-8 h-[2px] bg-[#0084FF] rounded-full" />
+              <span className="text-[#0084FF] text-[13px] font-black tracking-widest uppercase">
+                Our Process
+              </span>
+              <div className="w-8 h-[2px] bg-[#0084FF] rounded-full" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-black text-[#0A1128] leading-[1.15] tracking-tight mb-4">
+              A simple process that <span className="text-[#0084FF]">delivers results</span>.
+            </h2>
+            <p className="text-slate-500 font-medium text-sm sm:text-[15px] leading-relaxed max-w-xl">
+              We follow a clear, collaborative and proven process to turn ideas into powerful digital solutions.
+            </p>
+          </div>
+
+          {/* Process Timeline Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-y-16 gap-x-8 relative max-w-[1100px] mx-auto">
+            {steps.map((step, index) => (
+              <div key={step.number} className="flex flex-col items-center text-center relative w-full group">
+                {/* Connector line for desktop */}
+                {index < steps.length - 1 && (
+                  <div className="absolute top-[76px] left-[calc(50%+46px)] w-[calc(100%-92px)] -translate-y-1/2 hidden md:flex items-center justify-center pointer-events-none z-0">
+                    <div className="w-full border-t-2 border-dashed border-slate-200/80 relative flex items-center justify-center">
+                      <span className={`absolute right-[-5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full ${step.dotBg}`} />
+                    </div>
+                  </div>
+                )}
+
+                {/* Step Number */}
+                <span className={`text-[15px] font-black tracking-wider mb-4 ${step.numberColor}`}>
+                  {step.number}
+                </span>
+
+                {/* Circle Icon Container */}
+                <div className={`w-20 h-20 rounded-full flex items-center justify-center relative z-10 ${step.circleBg} border border-transparent shadow-sm group-hover:scale-105 group-hover:shadow-md transition-all duration-300`}>
+                  <div className="group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300">
+                    {step.icon}
+                  </div>
+                </div>
+
+                {/* Short Accent Line */}
+                <div className={`w-6 h-[3px] rounded-full my-5 ${step.accentBg}`} />
+
+                {/* Title */}
+                <h3 className="text-[17px] font-black text-[#0A1128] mb-2.5">
+                  {step.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-slate-500 font-medium text-[13px] leading-relaxed max-w-[190px]">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Global CTA Section */}
         <div className="mt-20 md:mt-24 text-center">
-          <div className="bg-[#f0f7ff] rounded-[32px] p-8 md:p-12 max-w-4xl mx-auto border border-blue-100/50 shadow-sm flex flex-col items-center">
+          <div className="bg-[#e5f0ff] rounded-[32px] p-8 md:p-12 max-w-[1100px] mx-auto border border-blue-200/50 shadow-sm flex flex-col items-center">
             <h2 className="text-2xl md:text-3xl font-black text-[#0A1128] mb-3">
               Have an <span className="text-[#0084FF]">innovative idea</span> in mind?
             </h2>
-            <p className="text-slate-500 font-medium text-sm md:text-[15px] max-w-lg mb-8 leading-relaxed">
+            <p className="text-slate-500 font-medium text-sm md:text-[15px] max-w-2xl mb-8 leading-relaxed">
               Let's collaborate to transform your vision into an outstanding digital experience. Contact our product designers today.
             </p>
             <button
