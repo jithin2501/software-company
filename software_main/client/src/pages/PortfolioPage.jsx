@@ -14,29 +14,50 @@ export default function PortfolioPage({ setView }) {
 
   const projects = [
     {
+      id: "sumathi-trends",
+      title: "Sumathi Trends",
+      category: "E-Commerce",
+      description: "A full-stack e-commerce platform with product management, secure payments and order tracking.",
+      imageUrl: "/images/portfolio/sumathi.png",
+      techStack: ["React", "Node.js", "MongoDB", "Razorpay"],
+      theme: {
+        badgeBg: "bg-[#f5f3ff]",
+        badgeText: "text-[#7c3aed]",
+        btnBg: "bg-[#f5f3ff]",
+        btnText: "text-[#7c3aed]",
+        hoverBg: "hover:bg-[#7c3aed] hover:text-white"
+      }
+    },
+    {
+      id: "skydental-hospital",
+      title: "Skydental Hospital",
+      category: "Healthcare",
+      description: "A dental care website with appointment booking, service management and patient information.",
+      imageUrl: "/images/portfolio/skydental.png",
+      techStack: ["Next.js", "MongoDB", "Tailwind CSS", "Nodemailer"],
+      theme: {
+        badgeBg: "bg-[#eefcf7]",
+        badgeText: "text-[#02a075]",
+        btnBg: "bg-[#eefcf7]",
+        btnText: "text-[#02a075]",
+        hoverBg: "hover:bg-[#02a075] hover:text-white"
+      }
+    },
+    {
       id: "maria-homes",
       title: "Maria Homes",
-      category: "Real Estate & Development",
-      description: "A premium real estate platform featuring modern property listings, high-resolution media viewer, and an optimized lead generation funnel for prospective home buyers.",
+      category: "Real Estate",
+      description: "A real estate platform to showcase properties with advanced search and inquiry management.",
       imageUrl: "/images/portfolio/mariahomes.png",
-      tags: ["React", "Tailwind CSS", "UX Design"],
-    },
-    {
-      id: "sky-dental",
-      title: "Sky Dental Clinic",
-      category: "Healthcare & Booking",
-      description: "An intuitive patient portal and administrative panel for a dental clinic, streamlining online appointments, doctor availability calendars, and services catalog.",
-      imageUrl: "/images/portfolio/skydental.png",
-      tags: ["Web App", "Clinic System", "Scheduler"],
-    },
-    {
-      id: "auxilium",
-      title: "Auxilium Platform",
-      category: "E-Learning & Community Support",
-      description: "An interactive support system designed to connect community volunteers with local social initiatives, featuring resource tracking and real-time request updates.",
-      imageUrl: "/images/portfolio/auxilium.png",
-      tags: ["NGO Tech", "Platform", "Community"],
-    },
+      techStack: ["React", "Firebase", "Tailwind CSS"],
+      theme: {
+        badgeBg: "bg-[#fdf8e6]",
+        badgeText: "text-[#c27a27]",
+        btnBg: "bg-[#fdf8e6]",
+        btnText: "text-[#c27a27]",
+        hoverBg: "hover:bg-[#c27a27] hover:text-white"
+      }
+    }
   ];
 
   const steps = [
@@ -230,71 +251,62 @@ export default function PortfolioPage({ setView }) {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 justify-items-center max-w-[1120px] mx-auto">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative w-full bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.015)] border border-slate-100/80 hover:border-blue-100 hover:shadow-[0_20px_40px_rgba(0,132,255,0.04)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col min-h-[480px]"
+              className="group relative w-full max-w-[360px] bg-white rounded-[32px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.02)] border border-slate-100/70 hover:border-slate-200 hover:shadow-[0_20px_45px_rgba(0,0,0,0.055)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col min-h-[500px]"
             >
               {/* Image Container */}
-              <div className="w-full aspect-[16/10] overflow-hidden bg-slate-50 relative border-b border-slate-50">
+              <div className="w-full aspect-[16/10.5] overflow-hidden bg-slate-50 relative">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1128]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               {/* Card Details */}
               <div className="p-8 flex flex-col flex-1 items-start text-left">
-                {/* Category & Tags */}
-                <div className="flex items-center justify-between w-full mb-3">
-                  <span className="text-[12px] font-extrabold text-[#0084FF] uppercase tracking-wider">
-                    {project.category}
-                  </span>
-                  <div className="flex gap-1.5">
-                    {project.tags.slice(0, 2).map((tag) => (
-                      <span key={tag} className="text-[10px] font-bold text-slate-400 bg-slate-50 px-2.5 py-0.5 rounded-full">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                {/* Category Badge */}
+                <span className={`inline-block px-3.5 py-1.5 rounded-lg ${project.theme.badgeBg} ${project.theme.badgeText} text-[10px] font-black uppercase tracking-widest mb-4 shadow-sm`}>
+                  {project.category}
+                </span>
 
                 {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-black text-[#0A1128] mb-3 group-hover:text-[#0084FF] transition-colors">
+                <h3 className="text-[25px] font-black text-[#0A1128] mb-3 leading-tight">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-slate-500 font-medium text-sm leading-relaxed mb-6 flex-1">
+                <p className="text-slate-500 font-medium text-[14.5px] leading-relaxed mb-8 flex-1">
                   {project.description}
                 </p>
 
-                {/* CTA Action */}
-                <button
-                  onClick={() => setView("contact")}
-                  className="inline-flex items-center gap-2 text-[#0084FF] hover:text-[#0070DA] font-extrabold text-sm transition-colors group/btn"
-                >
-                  Start Similar Project
-                  <svg
-                    className="w-4 h-4 transform transition-transform group-hover/btn:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    viewBox="0 0 24 24"
+                {/* Card Footer: Tech Stack and Circle Arrow Button */}
+                <div className="flex items-center justify-between w-full mt-auto pt-4">
+                  {/* Tech Stack */}
+                  <div className="text-slate-400 font-bold text-[13px] sm:text-[13.5px] tracking-wide">
+                    {project.techStack.join("  •  ")}
+                  </div>
+
+                  {/* Circle Arrow Button */}
+                  <button
+                    onClick={() => setView("contact")}
+                    className={`w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 ${project.theme.btnBg} ${project.theme.btnText} ${project.theme.hoverBg} cursor-pointer group/cardBtn`}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </button>
+                    <svg className="w-5 h-5 transition-transform group-hover/cardBtn:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* --- OUR PROCESS SECTION --- */}
-        <div className="mt-32 md:mt-40 border-t border-slate-100/80 pt-24 pb-12">
+        <div className="mt-16 md:mt-20 border-t border-slate-100/80 pt-16 pb-12">
           {/* Header */}
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
             <div className="flex items-center gap-2 mb-3">
