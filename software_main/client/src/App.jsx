@@ -5,6 +5,7 @@ import ContactPage from "./pages/ContactPage";
 import ServicesPage from "./pages/ServicesPage";
 import DigitalMarketingPage from "./pages/DigitalMarketingPage";
 import AboutPage from "./pages/AboutPage";
+import PortfolioPage from "./pages/PortfolioPage";
 import ServicesSection from "./components/ServicesSection";
 import CollaborationsSection from "./components/CollaborationsSection";
 import TrustedLeadersSection from "./components/TrustedLeadersSection";
@@ -41,6 +42,8 @@ export default function App() {
           <DigitalMarketingPage setView={setView} />
         ) : view === "about" ? (
           <AboutPage setView={setView} />
+        ) : view === "portfolio" ? (
+          <PortfolioPage setView={setView} />
         ) : (
           <ContactPage />
         )}

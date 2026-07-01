@@ -57,7 +57,7 @@ export default function Footer({ setView }) {
                 { name: "Home", view: "landing" },
                 { name: "About", view: "about" },
                 { name: "Services", view: "services" },
-                { name: "Portfolio", view: "landing" },
+                { name: "Portfolio", view: "portfolio" },
                 { name: "Contact", view: "contact" }
               ].map((item) => (
                 <li key={item.name}>

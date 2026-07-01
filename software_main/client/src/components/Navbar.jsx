@@ -121,6 +121,7 @@ export default function Navbar({ currentView, setView, setActiveServiceTab }) {
             (link === "Home" && currentView === "landing") ||
             (link === "Contact" && currentView === "contact") ||
             (link === "About" && currentView === "about") ||
+            (link === "Portfolio" && currentView === "portfolio") ||
             (link === "Services" && isServicesActive);
 
           return (
@@ -133,7 +134,9 @@ export default function Navbar({ currentView, setView, setActiveServiceTab }) {
                       ? "contact"
                       : link.toLowerCase() === "about"
                         ? "about"
-                        : "landing";
+                        : link.toLowerCase() === "portfolio"
+                          ? "portfolio"
+                          : "landing";
                   setView(targetView);
                 }}
                 className={`text-sm font-medium transition-colors cursor-pointer relative ${
@@ -243,7 +246,8 @@ export default function Navbar({ currentView, setView, setActiveServiceTab }) {
             const isActive =
               (link === "Home" && currentView === "landing") ||
               (link === "Contact" && currentView === "contact") ||
-              (link === "About" && currentView === "about");
+              (link === "About" && currentView === "about") ||
+              (link === "Portfolio" && currentView === "portfolio");
 
             return (
               <button
@@ -256,7 +260,9 @@ export default function Navbar({ currentView, setView, setActiveServiceTab }) {
                       ? "contact"
                       : link.toLowerCase() === "about"
                         ? "about"
-                        : "landing";
+                        : link.toLowerCase() === "portfolio"
+                          ? "portfolio"
+                          : "landing";
                   setView(targetView);
                 }}
                 className={`text-left text-sm font-medium transition-colors cursor-pointer ${
