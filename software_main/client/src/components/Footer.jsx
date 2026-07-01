@@ -27,20 +27,20 @@ export default function Footer({ setView }) {
               We create innovative digital solutions that help businesses grow, engage customers, and outperform the competition.
             </p>
             {/* Social Icons */}
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-4">
               {[
-                { name: "Facebook", icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" /></svg> },
-                { name: "LinkedIn", icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" /></svg> },
-                { name: "Instagram", icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" /></svg> },
-                { name: "X", icon: <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg> }
+                { name: "Facebook", iconUrl: "/images/icons/facebook.png" },
+                { name: "LinkedIn", iconUrl: "/images/icons/linkedin.png" },
+                { name: "Instagram", iconUrl: "/images/icons/instagram.png" },
+                { name: "YouTube", iconUrl: "/images/icons/youtube.png" }
               ].map((social) => (
                 <a
                   key={social.name}
                   href="#"
-                  className="w-9 h-9 rounded-full border border-slate-100 flex items-center justify-center text-slate-500 hover:text-[#0084FF] hover:border-[#0084FF]/30 hover:bg-blue-50/20 transition-all duration-200"
+                  className="hover:scale-110 transition-transform duration-200 flex items-center justify-center"
                   aria-label={social.name}
                 >
-                  {social.icon}
+                  <img src={social.iconUrl} alt={social.name} className="w-8 h-8 object-contain" />
                 </a>
               ))}
             </div>
@@ -109,12 +109,9 @@ export default function Footer({ setView }) {
             </div>
             <ul className="flex flex-col gap-4">
               {/* Location */}
-              <li className="flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-xl bg-blue-50/50 flex items-center justify-center text-[#0084FF] flex-shrink-0 border border-blue-100/30">
-                  <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 pt-0.5">
+                  <img src="/images/icons/location.png" alt="Location" className="w-6 h-6 object-contain" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[13px] font-medium text-slate-600 leading-relaxed">
@@ -123,24 +120,20 @@ export default function Footer({ setView }) {
                 </div>
               </li>
               {/* Email */}
-              <li className="flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-xl bg-blue-50/50 flex items-center justify-center text-[#0084FF] flex-shrink-0 border border-blue-100/30">
-                  <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0L12 13.525 2.25 6.75" />
-                  </svg>
+              <li className="flex items-center gap-3">
+                <div className="flex-shrink-0">
+                  <img src="/images/icons/mail.png" alt="Email" className="w-6 h-6 object-contain" />
                 </div>
-                <a href="mailto:hello@zentrivotech.com" className="text-[13px] font-medium text-slate-600 hover:text-[#0084FF] transition-colors pt-2">
+                <a href="mailto:hello@zentrivotech.com" className="text-[13px] font-medium text-slate-600 hover:text-[#0084FF] transition-colors pt-0.5">
                   hello@zentrivotech.com
                 </a>
               </li>
               {/* Phone */}
-              <li className="flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-xl bg-blue-50/50 flex items-center justify-center text-[#0084FF] flex-shrink-0 border border-blue-100/30">
-                  <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path d="M2.25 6.622c0-1.258 1.02-2.28 2.28-2.28h3.06c.647 0 1.251.278 1.673.766l2.128 2.464c.32.37.382.905.155 1.343l-1.077 2.08a11.025 11.025 0 004.832 4.832l2.08-1.077a1.47 1.47 0 011.343.155l2.464 2.128c.488.42.766 1.024.766 1.673v3.06c0 1.26-1.022 2.28-2.28 2.28-11.41 0-20.622-9.213-20.622-20.622z" />
-                  </svg>
+              <li className="flex items-center gap-3">
+                <div className="flex-shrink-0">
+                  <img src="/images/icons/phone.png" alt="Phone" className="w-6 h-6 object-contain" />
                 </div>
-                <a href="tel:+919876543210" className="text-[13px] font-medium text-slate-600 hover:text-[#0084FF] transition-colors pt-2">
+                <a href="tel:+919876543210" className="text-[13px] font-medium text-slate-600 hover:text-[#0084FF] transition-colors pt-0.5">
                   +91 98765 43210
                 </a>
               </li>
