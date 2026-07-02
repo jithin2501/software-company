@@ -154,7 +154,6 @@ export default function PortfolioPage({ setView }) {
     <div className="w-full bg-[#f9fafb] min-h-[calc(100vh-72px)] font-sans relative overflow-hidden">
       {/* Decorative background accents */}
       <div className="absolute top-[-10%] left-[-10%] w-[35vw] h-[35vw] rounded-full bg-purple-200/20 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[35vw] h-[35vw] rounded-full bg-blue-200/20 blur-[100px] pointer-events-none" />
 
       {/* --- HERO SECTION AT THE TOP --- */}
       <div className="max-w-[1240px] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
@@ -214,18 +213,13 @@ export default function PortfolioPage({ setView }) {
 
         </div>
 
-        {/* Right Column: Illustration Image & Overlapping Card */}
-        <div className="w-full lg:w-[55%] flex justify-center lg:justify-end relative">
-          <div className="relative w-full max-w-[550px] lg:max-w-[650px] aspect-[4/3] rounded-[32px] overflow-visible">
-            {/* Main Screenshot Image */}
-            <div className="w-full h-full rounded-[24px] overflow-hidden shadow-2xl border border-slate-100/50 bg-[#0A1128]">
-              <img
-                src="/images/home/landing.png"
-                alt="Landing Illustration"
-                className="w-full h-full object-cover block"
-              />
-            </div>
-          </div>
+        {/* Right Column: Landing Illustration Image */}
+        <div className="w-full lg:w-[55%] flex justify-center lg:justify-end">
+          <img
+            src="/images/home/landing.png"
+            alt="Landing Illustration"
+            className="w-full max-w-[550px] lg:max-w-[650px] h-auto object-contain block"
+          />
         </div>
 
       </div>
@@ -255,7 +249,7 @@ export default function PortfolioPage({ setView }) {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative w-full max-w-[360px] bg-white rounded-[32px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.02)] border border-slate-100/70 hover:border-slate-200 hover:shadow-[0_20px_45px_rgba(0,0,0,0.055)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col min-h-[500px]"
+              className="group relative w-full max-w-[360px] bg-white rounded-[32px] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.02)] border border-slate-100/70 hover:border-slate-200 hover:shadow-[0_20px_45px_rgba(0,0,0,0.055)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col min-h-[440px]"
             >
               {/* Image Container */}
               <div className="w-full aspect-[16/10.5] overflow-hidden bg-slate-50 relative">
@@ -267,24 +261,24 @@ export default function PortfolioPage({ setView }) {
               </div>
 
               {/* Card Details */}
-              <div className="p-8 flex flex-col flex-1 items-start text-left">
+              <div className="p-6 flex flex-col flex-1 items-start text-left">
                 {/* Category Badge */}
-                <span className={`inline-block px-3.5 py-1.5 rounded-lg ${project.theme.badgeBg} ${project.theme.badgeText} text-[10px] font-black uppercase tracking-widest mb-4 shadow-sm`}>
+                <span className={`inline-block px-3.5 py-1.5 rounded-lg ${project.theme.badgeBg} ${project.theme.badgeText} text-[10px] font-black uppercase tracking-widest mb-3 shadow-sm`}>
                   {project.category}
                 </span>
 
                 {/* Title */}
-                <h3 className="text-[25px] font-black text-[#0A1128] mb-3 leading-tight">
+                <h3 className="text-[25px] font-black text-[#0A1128] mb-2 leading-tight">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-slate-500 font-medium text-[14.5px] leading-relaxed mb-8 flex-1">
+                <p className="text-slate-500 font-medium text-[14.5px] leading-relaxed mb-6 flex-1">
                   {project.description}
                 </p>
 
                 {/* Card Footer: Tech Stack and Circle Arrow Button */}
-                <div className="flex items-center justify-between w-full mt-auto pt-4">
+                <div className="flex items-center justify-between w-full mt-auto pt-3">
                   {/* Tech Stack */}
                   <div className="text-slate-400 font-bold text-[13px] sm:text-[13.5px] tracking-wide">
                     {project.techStack.join("  •  ")}
@@ -306,7 +300,7 @@ export default function PortfolioPage({ setView }) {
         </div>
 
         {/* --- OUR PROCESS SECTION --- */}
-        <div className="mt-16 md:mt-20 border-t border-slate-100/80 pt-16 pb-12">
+        <div className="mt-16 md:mt-20 pt-16 pb-12">
           {/* Header */}
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
             <div className="flex items-center gap-2 mb-3">
@@ -368,7 +362,7 @@ export default function PortfolioPage({ setView }) {
 
         {/* Global CTA Section */}
         <div className="mt-20 md:mt-24 text-center">
-          <div className="bg-[#e5f0ff] rounded-[32px] p-8 md:p-12 max-w-[1100px] mx-auto border border-blue-200/50 shadow-sm flex flex-col items-center">
+          <div className="bg-[#e5f0ff] rounded-[32px] p-8 md:p-12 max-w-[1100px] mx-auto border border-blue-200/50 flex flex-col items-center">
             <h2 className="text-2xl md:text-3xl font-black text-[#0A1128] mb-3">
               Have an <span className="text-[#0084FF]">innovative idea</span> in mind?
             </h2>
